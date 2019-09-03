@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="registerSubordinateHeader">
+    <a onclick="setPanelBackPage_Fun('proxyManage');" class="icon_back" ></a>
+    <h1 >手动注册</h1>
+</header>
+
+<!--content部分-->
+    <div class="content" style="padding-bottom:1rem">
+            <p class="whitetext">下级类型:</p>
+            <div class="remind" style="margin-top: 10px;margin-bottom: 20px;">
+               <dl>
+                    <a onclick="SubordinateType(0);">
+                        <dd>
+                            <div class="userName">代理</div>
+                            <div id="dailiId" class="checkBoxA"></div>
+                        </dd>
+                    </a>
+                    <a onclick="SubordinateType(1);">
+                        <dd>
+                           <div class="userName">会员</div>
+                           <div id="huiyuanId" class="checkBox"></div>
+                        </dd>
+                    </a>
+                </dl>
+            </div>            
+
+            <p class="whitetext">用户名称:</p>
+            <input type="text" id="usernameid" value=""maxlength="16"  placeholder="字母、数字一种或多种组成" required />
+           <!-- <p class="whitetext">密码(由6-16位数字和字母混合组成):</p>
+            <input type="password" name="passwd" id="passwdid" value=""  maxlength="16"  placeholder="请输入6-16个字符" required />-->
+            <p class="whitetext">用户返点:</p>
+            <div id="daiLiID">
+                <select  id="DfanDianID" data-theme="a"></select>
+            </div>
+            <div id="huiyuanID" style="display: none">
+                <select  id="HYfanDianID" data-theme="a"></select>
+            </div>
+            <a class="loginBtn" id="registerSubmit">立即注册</a>
+            <p style="color:#fe1e52;text-align: center;margin-top: 30px;"><span> 温馨提示：手动注册成功的会员，初始密码为“a123456”。</span></p>
+        </div>
+    </div>
+</body>
+</html>

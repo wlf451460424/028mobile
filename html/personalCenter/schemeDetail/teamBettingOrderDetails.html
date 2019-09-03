@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<!--header头部-->
+	<!--团队投注订单详情-->
+	<header id="teamBettingOrderDetailsHeader">
+		<meta charset="UTF-8">
+		<a onclick="getPanelBackPage_Fun();" id="huodongTeam_back" class="icon_back" ></a>
+	    <h1 >订单详情</h1>
+	</header>
+	<body>
+		<div class="recordDetail">
+			<ul>
+				<li>
+					订单号：
+					<span id="teamBettingChaseOrderID"></span>
+				</li>
+				<li>
+					流水号：
+					<span id="teamBettingOrderID"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="orderdetail">
+			<table>
+				<tr>
+					<td id="fanDian_team_title">投注返点：<span id="fanDian_team"></span></td>
+					<td>投注模式：<span id="payMode_team"></span></td>
+				</tr>
+				<!--<tr>
+					<td>中奖后停止追号：<span id="winIsStop_team"></span></td>
+				</tr>-->
+				<tr>
+					<td>时间：<span id="datetime_team"></span></td>
+				</tr>
+			</table>
+		</div>
+		<!--Add 投注详单 -->
+		<div id="orderwrapper" style="padding-bottom: 30px;">
+			<ul  id="teamBettingOrderListCard"></ul>  <!--- 投注详单标题 --->
+			<div id="teamBettingCardContent" style="margin:10px 0.3rem 5px 0.3rem;border-radius: 8px;background-color:#FFFFFF;padding:10px;line-height: 24px;border:1px solid #ccc;"></div>    <!--- 投注详单内容 --->
+			<!--- 撤单 --->
+			<!--<ul  id="teamBettingCancelOrder"></ul>  -->
+		</div>
+	</body>
+</html>
+	

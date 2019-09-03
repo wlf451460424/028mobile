@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<!--header头部-->
+<header id="sendRedPacketHeader">
+    <a onclick="back_to_my_redPak()" class="icon_back" ></a>
+    <h1>发红包</h1>
+    <a onclick="setPanelBackPage_Fun('searchSendPerson')" style="right:0.4em" class="search"></a>
+</header>
+
+<div class="send-redPak-panel">
+    <div>
+        <b>发送对象：</b>
+        <p id="redPak_receiver" style="padding:8px 10px; background-color: #FFFFFF; color:#757575;text-align: left;">点击添加发送对象</p>
+
+        <b id="redPak_money_title">红包总金额 (元)：</b>
+        <input type="number" placeholder="可输入 1~50000 元" id="redPak_money" onkeyup="ValidateNumberTwoDecimal(this,this.value)" onchange="show_redPak_money(this);"/>
+        <p id="redPak_qiehuan">当前为<var>拼手气红包</var>，改为 <em id="redPak_type">普通红包</em></p>
+
+        <b>红包个数 (个)：</b>
+        <input type="number" placeholder="请输入红包个数" id="redPak_count" onkeyup="show_redPak_money_count(this)"/>
+        <p>该分支共 <span id="redPak_branchPerson" class="red-text">0</span> 人</p>
+    </div>
+
+    <div style="border-top:1px solid #cccccc;">
+        <b>彩票消费要求 (元)：</b>
+        <input type="number" id="redPak_expense" value="0" oninput="if(value.length>9)value=value.slice(0,9)" onkeyup="ValidateNumberTwoDecimal(this,this.value)">
+        <span class="red-text">（0代表不限制）</span>
+
+        <b>充值要求 (元)：</b>
+        <input type="number" id="redPak_charge" value="0" oninput="if(value.length>9)value=value.slice(0,9)" onkeyup="ValidateNumberTwoDecimal(this,this.value)">
+        <span class="red-text">（0代表不限制）</span>
+
+        <b>红包名称：</b>
+        <input type="text" id="redPak_name" placeholder="恭喜发财，大吉大利！" onkeyup="this.value=limitLength(this,30)" onblur="this.value=limitLength(this,30)" >
+    </div>
+
+    <div>
+        <h3>￥<span id="redPak_total_money">0</span></h3>
+        <p id="isShow_can_get_money" style="display: none;">对方可领取的红包金额为 <span class="red-text">0.01~200</span> 元</p>
+        <button id="redPak_submit" class="loginBtn" style="border:none;background-color: #de5555;">发出红包</button>
+    </div>
+
+    <div class="tips">
+        <p>温馨提示：</p>
+        <p>1.每人每天最多发出<span id="redPak_daily_max_send"></span>个红包。</p>
+        <p>2.未领取的红包，将于24小时后进行退款。</p>
+    </div>
+</div>
+
+</body>
+</html>

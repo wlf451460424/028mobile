@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="sendEmailHeader">
+    <a id="sendEmail_back" class="icon_back"></a>
+    <h1>发消息</h1>
+</header>
+
+<!--content部分-->
+<div class="content" style="padding-bottom:1rem">
+<div class="sendEmail">
+    <div class="sendEmailRer">
+        <b> 收件人：</b>
+        <p id="emailReceiver">点击添加收件人</p>
+    </div>
+    <div class="sendEmailTitle">
+        <b> 主题：</b>
+        <input id="sendEmailTit" type="text" style="padding-right: 36px;" onkeyup="this.value=limitLength(this,50)" onblur="this.value=limitLength(this,50)" placeholder="最多输入50个字符">
+    </div>
+    <div class="sendEmailWrite">
+        <b> 内容：</b>
+        <textarea name="writeEmail" id="writeEmail" cols="40" rows="10" onkeyup="this.value=limitLength(this,400)" onblur="this.value=limitLength(this,400)" placeholder="最多输入400个字符" maxlength="400" style="resize:none;"></textarea>
+    </div>
+    <div><button class="longBtn" id="sendEmailSubmit">发 &nbsp; 送</button></div>
+</div>
+
+</div>
+
+</body>
+</html>

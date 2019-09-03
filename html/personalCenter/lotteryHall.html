@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <header id="lotteryHallHeader">
+        <h1>正信永胜</h1>
+        <a href="#" id="kefuID" style="right:0.4em" class="kefu"></a>
+
+        <!--red Packet-->
+        <div class="red-packet-box" style="display: none;" id="openRedPacketBox">
+            <img src="././images/redPacket/redPacket.png" alt="RedPacket" style="width: 34px;height:42px;">
+            <span style="position: relative;color:#f54445;top:-22px;left:6px;width: 22px;text-align: center;display: inline-block;">0</span>
+        </div>
+    </header>
+
+    <div class="content" >
+        <div class="ActivitesGonggao">
+            <div id="ActiveIcons" class="ActivesIcons"></div>
+            <div id="activitiesScroller" class="cls_container"></div>
+        </div>
+        <div id="huadong">
+            <div class="swipe-wrap">
+            <!--Banner-->
+                <!--<div onclick="createInitPanel_Fun('activity_1');">-->
+                <div onclick="createInitPanel_Fun('new_activity_1');">
+                    <a><img src="images/new_activityImg/activity1.png" /></a>
+                </div>
+                <div onclick="createInitPanel_Fun('new_activity_3');">
+                    <a><img src="images/new_activityImg/activity3.png" /></a>
+                </div>
+            </div>
+            <div class="xiaoyuandian">
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--
+            <a href="javascript:$('#huadong').css('display', 'none');" class="close"></a>-->
+        </div>
+    <div class="mainNav box">
+        <ul>
+            <li><a id="awardHallId"  style="color: #727272;"><img src="images/icon_award_32.png" style="width: 29px;height: 39px;padding-top: 8px;padding-bottom:3px;"/><br/>开奖公告</a></li>
+            <li><a id="bulletinId"  style="color: #727272;"><img src="images/icon_bulletin.png" style="width: 29px;height: 39px;padding-top: 8px;padding-bottom:3px;" /><br />系统资讯</a></li>
+            <li><a id="activityId"  style="color: #727272;"><img src="images/icon_activity.png" style="width: 29px;height: 39px;padding-top: 8px;padding-bottom:3px;" /><br />优惠活动</a></li>
+            <li><a id="wodecaipiao"  style="color: #727272;"><img src="images/icon_person_32.png"  style="width: 29px;height: 39px;padding-top: 8px;padding-bottom:3px;" /><br />个人中心</a></li>
+        </ul>
+    </div>
+    
+    <div id="game_type" class="changeplay" >
+     	<ul>
+            <li id="game_type_lottery" >官方彩</li>
+            <li id="game_type_credit" >信用盘</li>
+            <li id="game_type_card" style="display:none">娱乐中心</li>
+        </ul>
+	</div> 
+        
+    <!--彩种展示-->
+    <div id="lottery_jjc" class="lotteryKind box marT_8">
+    </div>
+  
+    <div class="title" style="display: none"><a onclick="createInitPanel_Fun('awardHall');">更多</a>最新开奖</div>
+    <div >
+        <ul id="newAwardList" class="awardNotice">
+        </ul>
+    </div>
+
+<!--     <div class="footerNav">
+        <a onclick="$.ui.scrollToTop('lotteryHallPage')" class="floatR backTop"><i></i>TOP</a>
+    </div> -->
+    <div class="Indexfooter">
+        <p><a class="footBtn active" onclick="createInitPanel_Fun('playtype_help');">玩法说明</a>
+        <p class="version">
+            <a onclick="downloadApp_Fun();">下载客户端</a>
+            <a class="active">触屏版</a>
+            <a onclick="loginComputerLink();">电脑版</a></p>
+        <p>版权所有 ©<span id="copyrightYear"></span></p>
+    </div>
+    </div>
+</body>
+</html>

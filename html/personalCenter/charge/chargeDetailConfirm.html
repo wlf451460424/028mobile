@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8"/>
+    <title>充值详情</title>
+</head>
+<body>
+    <header id="chargeDetailConfirmHeader" >
+        <a  onclick="createInitPanel_Fun('charge');" class="icon_back"></a>
+        <h1 id="titleID">充值详情</h1>
+    </header>
+   <div class="content" style="padding-bottom: 16px;">
+   		<span id="zhifu_personalInfo" style="display: none;font-weight: bold;padding: 10px;line-height: 30px;">收款人信息</span>
+        <div class="walletTop" style="border:none">
+            <ul id="chargeInfo1" class="charge-detail">
+                <p style="border-bottom: 1px dashed #cccccc;text-align: center;padding: 3px 0;font-weight:500;">提示：长按 或 双击，可选中需复制的内容.</p>
+                <li>
+                    <span>收  款  人 ： </span>
+                    <input type="text" id="cashUser" readonly="readonly">
+                </li>
+                <li>
+                    <span>收款银行：</span>
+                    <input type="text" id="cashBank" readonly="readonly">
+                </li>
+                <li id="showKaiHuBank">
+                    <span>开户地址：</span><input type="text" id="kaiHuBank" readonly="readonly">
+                </li>
+                <li>
+                    <span>收款卡号：</span>
+                    <input type="text" id="cashBankNo" readonly="readonly">
+                </li>
+                <li>
+                    <span>充值金额：</span><input type="text" id="cash" readonly="readonly">
+                </li>
+                <li id="fuyanID">
+                    <span>附 言 ： </span><input type="text" id="fuyan" readonly="readonly">
+                </li>
+            </ul>
+            <ul id="chargeInfo2">
+                <li>
+                	充值方式：<span id="payMethod"></span>
+                </li>
+                <li>
+                	充值金额：<span id="payValue"></span>
+                </li>
+                <li id="isShowWechatPayNum">
+                	付款码数字：<br> <input id="wechatPayNum" type="tel" value="" maxlength="18" placeholder="请输入18位付款码数字" onkeyup="this.value=this.value.replace(/\D/g,'')" onblur="this.value=this.value.replace(/\D/g,'')" style="width: 100%;height: 44px;border: 1px #c2c2c2 solid; border-radius: 3px; padding: 4px 10px; margin:6px 0; color:#333333; font-size: 16px;"/>
+                    <p><b>付款码查看步骤：</b> <br>打开微信钱包 &rarr; 收付款 &rarr; 点击条形码查看付款码数字。</p>
+                </li>
+            </ul>
+            <ul id="chargeInfo3" >
+                <li style="color:#000000;text-align: center; line-height: 40px;">
+                	充值金额：<span id="erweima_payValue" style="color: #FF0000;font-weight: bold;"></span>&nbsp&nbsp元
+                </li>
+                <li style="text-align: center;">
+                   <img id="erweima" style="width: 150px;height: 150px;"/>
+                </li>
+            </ul>
+        </div>
+        <a  class="loginBtn"  id="changeSubmit">立即付款</a>
+
+        <div class="note" id="shuomingID" style="display: none;">
+            <h3>充值说明：</h3>
+            <ul>
+                <li>
+                    1、为了保证充值能及时到账请先转账成功后再提交充值订单。
+                    <!--<a style="color:#3482d3" onclick="createInitPanel_Fun('alipayHelp', true);" >【支付宝充值流程演示】</a>
+                    <a style="color:#25ae46" onclick="createInitPanel_Fun('wechatHelp', true);" >【微信充值流程演示】</a>-->
+                </li>
+                <li>
+                    2、本系统支持网银、手机银行、跨行转账。
+                </li>
+                <li>
+                    3、我司收款卡可能会随时进行更换，每次充值时需从充值页面重新获取，不能通过历史交易记录中所保留的卡号转账，如果转错卡号，损失由客户自行承担。
+                </li>
+                <li>
+                    4、正常转账成功后 <b>1-3分钟内</b> 资金将会自动到账(遇银行延迟除外)。超时未到请联系客服咨询。
+                </li>
+            </ul>
+        </div>
+
+       <!--打款信息-->
+       <span id="jieshou_personalInfo" style="display: none;font-weight: bold;padding: 10px;line-height: 30px;">打款人信息</span>
+       <div id="remitInfo" class="remitInfo">
+           <p style="colro:red;text-align: center;">完成转账后，请填写下面的打款信息并提交。   切勿重复提交同一笔订单！</p>
+           <p>真实姓名：<span>请填写持卡人姓名</span>	</p>
+               <input type="text" id="remitName">
+           <p>转账金额：<span>与转账金额需一致，否则影响上分</span></p>
+           <input type="number" id="remitMoney" readonly>
+           <div style="display: none;" id="remitTime_div">
+	           	<p>转账时间：<span> 例如：20点12分请填写2012</span>	</p>
+	           	<input type="number" id="remitTime" maxlength="4" onkeyup="this.value=this.value.replace(/\D/g,'')">
+           </div>
+           <div style="display: none;" id="remitOrderID_div">
+           		<p>转账单号：<span> 转帐单号后六位</span>	</p>
+       			<input type="text" id="remitOrderID" maxlength="6">
+           </div>
+           <a class="loginBtn" id="remitSubmit" style="display: none;">已转账，提交平台审核</a>
+       </div>
+       
+       <!--二维码专用充值说明-->
+       <div class="note" id="shuomingID_erweima" style="display: none;">
+            <h3>充值说明：</h3>
+            <ul>
+                <li>
+                    1、为了保证充值能及时到账，请先转账成功后再提交充值订单。
+                </li>
+                <li>
+                    2、为确保到账速度，请客户尽量在1-2分钟内完成转账充值。
+                </li>
+                <li>
+                    3、我司收款码可能会随时进行更换，每次充值时需从充值页面重新获取，不能通过历史交易记录、相册中所保留的二维码付款，如付款至过期二维码，损失由客户自行承担。
+                </li>
+                <li>
+                    4、正常付款成功后1-3分钟内资金将会自动到账（与银行延迟除外），超时未到请联系客服咨询。
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

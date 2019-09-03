@@ -1,0 +1,7 @@
+dist/
+Desktop.ini
+*.imi
+node_modules/
+.idea/
+.project
+.DS_Store

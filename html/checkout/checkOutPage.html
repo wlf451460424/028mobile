@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>出票详情</title>
+</head>
+<body>
+    <header id="checkOutPageHeader"  >
+        <a href="#" id="checkOutPage_back" class="icon_back"></a>
+        <h1 id="ticcket_name"></h1>
+    </header>
+    <!--footer底部  -->
+    <footer id='checkOutPageFooter'>
+         <div style="text-align:center; vertical-align:central; ">
+            <a  id="checkOutPage_zhuihao"   class="button grayBtn">追号</a>
+            <a id="checkOutPage_payout"  href="#" class="button redBtn">付款</a>
+            <div class="footertext">
+            <p>
+                <span  id="checkOutPage_zhushu" class="redtext"></span>&nbsp;注&nbsp;共&nbsp;
+                <span  id="checkOutPage_money"  class="redtext"></span>&nbsp;元</p>
+            <p> 余额：<span id="checkOut_lottery_money" style="color: #FE5D39;height: 22px;"></span>&nbsp;元 </p>
+            </div>
+        </div>
+    </footer>
+    <div data-role="content" >
+        <div style="text-align: center;">
+            <a class="button icon add" id="checkOutPage_shouxuan" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #FE5D39;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px; font-weight: 500;" href="#">+ 手动选号</a>
+            <a class="button icon add" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #FE5D39;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px; font-weight: 500;"  id="checkOutPage_jixuan" href="#">+ 自动选号</a>
+             <a class="button icon add" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #FE5D39;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px; font-weight: 500;"  id="checkOutPage_qingkong" href="#">- 清空选号</a>
+        </div>
+        <div id="selectNum_list">
+            <ul class="list inset numList" id="listviewid">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

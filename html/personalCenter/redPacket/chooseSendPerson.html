@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<!--header头部-->
+<header id="chooseSendPersonHeader">
+    <a onclick="setPanelBackPage_Fun('sendRedPacket')" class="icon_back" ></a>
+    <h1>发送对象</h1>
+    <a style="right:0.6em;top:0.6em;" onclick="subCommit()">确定</a>
+</header>
+
+<div class="redPackObject" >
+	<dl>
+		<a onclick="chooseSendType(1);">
+			<dd>
+				<div id="wholeId" class="checkBoxA"></div>
+				<div class="userName">整个团队</div>
+			</dd>
+		</a>
+		<a onclick="chooseSendType(2);">
+			<dd>
+			   <div id="directId" class="checkBox"></div>
+			   <div class="userName">直属下级</div>
+			</dd>
+		</a>
+		<a onclick="chooseSendType(3);">
+			<dd>
+			   <div id="singleId" class="checkBox"></div>
+			   <div class="userName">单个人</div>
+			</dd>
+		</a>
+	</dl>
+</div>
+
+<!--<input type="text" placeholder="请输入用户名" onclick="setPanelBackPage_Fun('searchSendPerson')"/>-->
+
+<p id="redPak_showTypeTip" style="text-align: center; color:#FE5D39;margin:6px 0;"></p>
+
+<div id="redPacket_nav_scroller" style="overflow:hidden;border-bottom: 1px solid #ddd; border-top: 1px dashed #ddd;">
+	<div class="redPackObject_daohang" id="navigationLabel"></div>
+</div>
+
+<div class="SubordinateStyle" id="redPakSubListScroller" style="position:absolute;width: 100%;top:102px;bottom:2px;overflow: hidden;" >
+	<!--<p id="nowName"></p>-->
+	<ul id="SubordinateList">
+	</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提款</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<header id="withdrawalHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>提款</h1>
+</header>
+<div class="content">
+    <div class="walletTop">
+       <p class="whitetext"> <span id="withdrawalUser"></span>，您好！ </p>
+       <p class="whitetext"> 余额：<span id="walletMoneyId"></span> </p>
+    </div>
+    <p class="whitetext" style="color:#FE5D39;padding:3px 10px;"><img src="./././images/tips.png" style="width: 20px;height: 20px;margin:-2px 3px 2px 0;"/>提款银行为默认卡，如需更改，请在银行卡管理中修改.</p>
+    <div style="margin-top: 10px; padding-bottom: 26px;">
+        &nbsp;&nbsp;开户银行：<span id="userBankWithdraw"></span>
+        <p style="padding: 1px;"></p>
+        &nbsp;&nbsp;银行卡号：<span id="userBankNoWithdraw"></span>
+        <p style="padding: 1px;"></p>
+        <!--<p class="whitetext">真实姓名：</p>
+        <input type="text"  id="realUserNameWithdrawId"  onkeyup="return realNameNoSpaceWdraw(this,value)" onblur="return realNameNoSpaceWdraw(this,value)" value=""/>-->
+       
+        <p id="tikuan_free_p">&nbsp;&nbsp;手续费：<span id="tikuan_free" style="color: #FF0000;">0</span><span>元(剩余</span><span id="tikuan_free_tip">0</span>次免手续费)</p>
+        <p style="padding: 1px;"></p>
+        <p class="whitetext">提款金额：(范围为<span id="drawMinMoney"></span>-<span id="drawMaxMoney"></span>元)</p>
+        <input type="text"  id="withdrawalMoneyWithdrawId"  placeholder="请输入提款金额" onkeyup="return ValidateNumber_withdrawal(this,value)" onblur="return ValidateNumber_withdrawal(this,value)" value=""/>
+        <p class="whitetext">资金密码：</p>
+        <input type="password" name="withdrawalPasswdId"  id="withdrawalPasswdId" value="" placeholder="请输入资金密码"/>
+		<p class="whitetext">验证码：</p>
+        	
+    	<div>
+    		<input style="vertical-align:middle; width:60%; height:40px;" maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'')"  type='text' id="withdrawal_validateCode" placeholder="请输入验证码" />
+	        <img style="vertical-align:middle;width:30%; height:40px;" id="withdrawal_Code" onclick="withdrawal_showCode()"/>
+    	</div>
+        	
+        <a class="loginBtn"  id="withdrawalSubmitId">提款</a>
+        
+        <div class="walletTop" id="DrawFeeMoenyType_div">
+	       <p class="whitetext" style="font-weight: bolder;">提款说明:</p>
+	       <p class="whitetext"> 提款时间：<span id="tikuan_time"></span> </p>
+	       <p class="whitetext"> 单笔限额：<span id="tikuan_xiane"></span> </p>
+	       <p class="whitetext"> 提款次数：<span id="tikuan_xianzhi"></span> </p>
+	       <p class="whitetext" id="tikuan_tip_head"> 重要提示：<span id="tikuan_tip"></span> </p>
+	       <p class="whitetext" id="tikuan_guize_head"> 规则说明：<span id="tikuan_guize"></span> </p>
+	    </div>
+	    
+	    <div class="walletTop" style="display: none;" id="DrawFeeMoenyType_list">
+	    	 <table style="width: 100%; text-align: center;">
+		        <thead>
+		            <tr>
+		                <th>提款次数</th>
+		                <th id="show_type">手续费标准</th>
+		            </tr>
+		        </thead>
+		        <tbody id="J_TbData">
+		        </tbody>
+		    </table>
+	    </div>	
+    </div>
+    
+</div>
+</body>
+</html>

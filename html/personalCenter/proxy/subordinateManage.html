@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="subordinateManageHeader">
+    <a onclick="setPanelBackPage_Fun('proxyMember');" class="icon_back" ></a>
+    <h1 >下级管理</h1>
+</header>
+
+<!--content部分-->
+<div style="padding-bottom:1rem">
+
+    <div class="myLotteryList">
+        <ul>
+    		<li>
+                <a onclick="createInitPanel_Fun('proxyMemberDetail')">个人资料<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('proxyUpgrade')">升级<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('proxyAccountRecord')">账变记录<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('proxyBettingRecord')">彩票投注<span class="btnRight"></span></a>
+            </li>
+             <li>
+                <a onclick="createInitPanel_Fun('proxyBettingRecordPK')">双面盘<span class="btnRight"></span></a>
+            </li>
+            <li id="chargeForProxy">
+                <a>下级转账<span class="btnRight"></span></a>
+            </li>
+            <li id="IsShowDailywages" style="display: none;">
+                <a onclick="createInitPanel_Fun('settingDailywages')">日结设置<span class="btnRight"></span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

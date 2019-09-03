@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script>
+        $("#help_bxwfc_title").html(LotteryInfo.getLotteryNameByTag("bxwfc"));
+    </script>
+</head>
+<body>
+<header id="lottery_bxwfc_helpHeader" data-transition="up">
+    <a href="#" onclick="backFn();" class="icon_back" ></a>
+    <h1 id="help_bxwfc_title"></h1>
+</header>
+<div>
+    <section id="wrapper">
+        <article id="scroller">
+            <dl class="dlTit">
+                <dt>开奖时间：</dt>
+                <dd>24小时售卖，5分钟一期，全天共288期。</dd>
+            </dl>
+            <dl class="dlTit">
+                <dt>玩法规则：</dt>
+                <dd>每期开奖号码为5个数字，每个开奖数字范围0-9</dd>
+            </dl>
+
+            <dl class="dlTit" style="margin: 5px 0;">
+                <dt>玩法说明：</dt>
+            </dl>
+            <br>
+            <div>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <th width="20%" colspan="2">玩法</th>
+                        <th colspan="3">中奖条件</th>
+                    </tr>
+                    <tr>
+                        <td width="10%" rowspan="9">五星</td>
+                    </tr><tr>
+                        <td>直选</td>
+                        <td colspan="3">按位猜中开奖全部号码</td>
+                    </tr>
+                    <tr>
+                        <td>组选120</td>
+                        <td colspan="3">选择5个号码，选号与开奖号一致，顺序不限</td>
+                    </tr>
+                    <tr>
+                        <td>组选60</td>
+                        <td colspan="3">选择1个二重号和3个单号，开奖号码包含单号，且二重号在开奖号码中出现2次</td>
+                    </tr>
+                    <tr>
+                        <td>组选30</td>
+                        <td colspan="3">选择2个二重号和1个单号，开奖号码包含单号，且2个二重号分别在开奖号码中出现2次</td>
+                    </tr>
+                    <tr>
+                        <td>组选20</td>
+                        <td colspan="3">选择1个三重号和2个单号，开奖号码包含单号，且三重号在开奖号码中出现3次</td>
+                    </tr>
+                    <tr>
+                        <td>组选10</td>
+                        <td colspan="3">选择1个三重号和1个二重号，开奖号码中三重号出现3次，二重号出现2次</td>
+                    </tr>
+                    <tr>
+                        <td>组选5</td>
+                        <td colspan="3">选择1个四重号和1个单号，开奖号码包含单号，且四重号在开奖号码中出现4次</td>
+                    </tr>
+                    <tr>
+                        <td>总和大小单双</td>
+                        <td colspan="3">猜5位开奖号码总和的大小单双形态。≥23为大、≤22为小、总和是单数为单、总和是双数为双。</td>
+                    </tr>
+
+                    <tr><td rowspan="5">四星</td>
+                        <td>直选</td>
+                        <td colspan="3">按位猜中开奖号码后四位</td>
+                    </tr>
+                    <tr>
+                        <td>组选24</td>
+                        <td colspan="3">选择4个号码，选号与开奖号后四位一致，顺序不限。</td>
+                    </tr>
+                    <tr>
+                        <td>组选12</td>
+                        <td colspan="3">选择1个二重号和2个单号，开奖号码后四位包含单号，且二重号出现2次。</td>
+                    </tr>
+                    <tr>
+                        <td>组选6</td>
+                        <td colspan="3">选择2个二重号，所选的2个二重号在开奖号码后四位中分别出现2次。</td>
+                    </tr>
+                    <tr>
+                        <td>组选4</td>
+                        <td colspan="3">选择1个三重号与1个单号，开奖号码后四位包含单号，且三重号出现3次。</td>
+                    </tr>
+
+                    <tr><td rowspan="10">后三</td>
+                        <td>直选复式</td>
+                        <td colspan="3">按位猜中开奖号码后三位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码后三位的和值</td>
+                    </tr>
+                    <tr>
+                        <td>直选跨度</td>
+                        <td colspan="3">猜中开奖号码后三位最大与最小数字相减之差</td>
+                    </tr>
+                    <tr>
+                        <td>组三</td>
+                        <td colspan="3">猜中开奖号码后三位（2位不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>组六</td>
+                        <td colspan="3">猜中开奖号码后三位（不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>混合组选</td>
+                        <td colspan="3">猜中开奖号码后三位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码后三位的和值（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选包胆</td>
+                        <td colspan="3">猜中开奖号码后三位任意一位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>和值尾数</td>
+                        <td colspan="3">猜中开奖号码后三位三个数字相加之和的尾数</td>
+                    </tr>
+                    <tr>
+                        <td>特殊号</td>
+                        <td colspan="3">猜中开奖号码后三位的特殊属性（豹子、顺子、对子、半顺、杂六）</td>
+                    </tr>
+
+                    <tr><td rowspan="10">中三</td>
+                        <td>直选复式</td>
+                        <td colspan="3">按位猜中开奖号码中三位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码中三位的和值</td>
+                    </tr>
+                    <tr>
+                        <td>直选跨度</td>
+                        <td colspan="3">猜中开奖号码中三位最大与最小数字相减之差</td>
+                    </tr>
+                    <tr>
+                        <td>组三</td>
+                        <td colspan="3">猜中开奖号码中三位（2位不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>组六</td>
+                        <td colspan="3">猜中开奖号码中三位（不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>混合组选</td>
+                        <td colspan="3">猜中开奖号码中三位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码中三位的和值（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选包胆</td>
+                        <td colspan="3">猜中开奖号码中三位任意一位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>和值尾数</td>
+                        <td colspan="3">猜中开奖号码中三位三个数字相加之和的尾数</td>
+                    </tr>
+                    <tr>
+                        <td>特殊号</td>
+                        <td colspan="3">猜中开奖号码中三位的特殊属性（豹子、顺子、对子、半顺、杂六）</td>
+                    </tr>
+
+                    <tr><td rowspan="10">前三</td>
+                        <td>直选复式</td>
+                        <td colspan="3">按位猜中开奖号码前三位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码前三位的和值</td>
+                    </tr>
+                    <tr>
+                        <td>直选跨度</td>
+                        <td colspan="3">猜中开奖号码前三位最大与最小数字相减之差</td>
+                    </tr>
+                    <tr>
+                        <td>组三</td>
+                        <td colspan="3">猜中开奖号码前三位（2位不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>组六</td>
+                        <td colspan="3">猜中开奖号码前三位（不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>混合组选</td>
+                        <td colspan="3">猜中开奖号码前三位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码前三位的和值（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>组选包胆</td>
+                        <td colspan="3">猜中开奖号码前三位任意一位（不含豹子号）</td>
+                    </tr>
+                    <tr>
+                        <td>和值尾数</td>
+                        <td colspan="3">猜中开奖号码前三位三个数字相加之和的尾数</td>
+                    </tr>
+                    <tr>
+                        <td>特殊号</td>
+                        <td colspan="3">猜中开奖号码前三位的特殊属性（豹子、顺子、对子、半顺、杂六）</td>
+                    </tr>
+
+                    <tr><td rowspan="6">后二</td>
+                        <td>直选复式</td>
+                        <td colspan="3">按位猜中开奖号码后两位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码后两位的和值</td>
+                    </tr>
+                    <tr>
+                        <td>直选跨度</td>
+                        <td colspan="3">猜中开奖号码后两位最大与最小数字相减之差</td>
+                    </tr>
+                    <tr>
+                        <td>组选复式</td>
+                        <td colspan="3">猜中开奖号码后两位（不含对子）</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码后两位的和值（不含对子）</td>
+                    </tr>
+                    <tr>
+                        <td>组选包胆</td>
+                        <td colspan="3">猜中开奖号码后二位任意一位（不含对子）</td>
+                    </tr>
+
+                    <tr><td rowspan="6">前二</td>
+                        <td>直选复式</td>
+                        <td colspan="3">按位猜中开奖号码前两位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码前两位的和值</td>
+                    </tr>
+                    <tr>
+                        <td>直选跨度</td>
+                        <td colspan="3">猜中开奖号码前两位最大与最小数字相减之差</td>
+                    </tr>
+                    <tr>
+                        <td>组选复式</td>
+                        <td colspan="3">猜中开奖号码前两位（不含对子）</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码前两位的和值（不含对子）</td>
+                    </tr>
+                    <tr>
+                        <td>组选包胆</td>
+                        <td colspan="3">猜中开奖号码前二位任意一位（不含对子）</td>
+                    </tr>
+
+                    <tr><td>定位胆</td>
+                        <td>定位胆</td>
+                        <td colspan="3">按位猜中开奖号码任意一位</td>
+                    </tr>
+
+                    <tr><td rowspan="11">不定位</td>
+                        <td>后三一码</td>
+                        <td colspan="3">猜中开奖号码后三位任意一位</td>
+                    </tr>
+                    <tr>
+                        <td>后三二码</td>
+                        <td colspan="3">猜中开奖号码后三位任意二位</td>
+                    </tr>
+                    <tr>
+                        <td>前三一码</td>
+                        <td colspan="3">猜中开奖号码前三位任意一位</td>
+                    </tr>
+                    <tr>
+                        <td>前三二码</td>
+                        <td colspan="3">猜中开奖号码前三位任意二位</td>
+                    </tr>
+                    <tr>
+                        <td>后四一码</td>
+                        <td colspan="3">猜中开奖号码后四位任意一位</td>
+                    </tr>
+                    <tr>
+                        <td>后四二码</td>
+                        <td colspan="3">猜中开奖号码后四位任意二位</td>
+                    </tr>
+                    <tr>
+                        <td>前四一码</td>
+                        <td colspan="3">猜中开奖号码前四位任意一位</td>
+                    </tr>
+                    <tr>
+                        <td>前四二码</td>
+                        <td colspan="3">猜中开奖号码前四位任意二位</td>
+                    </tr>
+                    <tr>
+                        <td>五星一码</td>
+                        <td colspan="3">猜中开奖号码任意一位</td>
+                    </tr>
+                    <tr>
+                        <td>五星二码</td>
+                        <td colspan="3">猜中开奖号码任意二位</td>
+                    </tr>
+                    <tr>
+                        <td>五星三码</td>
+                        <td colspan="3">猜中开奖号码任意三位</td>
+                    </tr>
+
+                    <tr><td rowspan="4">大小单双</td>
+                        <td>后二</td>
+                        <td colspan="3">按位猜中开奖号码后两位大小单双属性</td>
+                    </tr>
+                    <tr>
+                        <td>后三</td>
+                        <td colspan="3">按位猜中开奖号码后三位大小单双属性</td>
+                    </tr>
+                    <tr>
+                        <td>前二</td>
+                        <td colspan="3">按位猜中开奖号码前二位大小单双属性</td>
+                    </tr>
+                    <tr>
+                        <td>前三</td>
+                        <td colspan="3">按位猜中开奖号码前三位大小单双属性</td>
+                    </tr>
+
+                    <tr><td rowspan="4">任选二</td>
+                        <td>直选</td>
+                        <td colspan="3">按位猜中开奖号码任意两位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码所选两位的和值 </td>
+                    </tr>
+                    <tr>
+                        <td>组选</td>
+                        <td colspan="3">猜中开奖号码所选两位</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码所选两位的和值（不含对子）</td>
+                    </tr>
+
+                    <tr><td rowspan="6">任选三</td>
+                        <td>直选</td>
+                        <td colspan="3">按位猜中开奖号码任意三位</td>
+                    </tr>
+                    <tr>
+                        <td>直选和值</td>
+                        <td colspan="3">猜中开奖号码所选三位的和值 </td>
+                    </tr>
+                    <tr>
+                        <td>组三</td>
+                        <td colspan="3">猜中开奖号码所选三位（2位相同）</td>
+                    </tr>
+                    <tr>
+                        <td>组六</td>
+                        <td colspan="3">猜中开奖号码所选三位（不相同）</td>
+                    </tr>
+                    <tr>
+                        <td>混合组选</td>
+                        <td colspan="3">猜中开奖号码所选三位(不含豹子号)</td>
+                    </tr>
+                    <tr>
+                        <td>组选和值</td>
+                        <td colspan="3">猜中开奖号码所选三位的和值(不含豹子号)</td>
+                    </tr>
+
+                    <tr><td rowspan="5">任选四</td>
+                        <td>直选</td>
+                        <td colspan="3">按位猜中开奖号码任意四位</td>
+                    </tr>
+                    <tr>
+                        <td>组选24</td>
+                        <td colspan="3">至少选择4个号码，选号与所选4个位置的开奖号码一致，顺序不限</td>
+                    </tr>
+                    <tr>
+                        <td>组选12</td>
+                        <td colspan="3">选择1个二重号和2个单号，所选4个位置的开奖号码包含单号，且二重号出现了2次</td>
+                    </tr>
+                    <tr>
+                        <td>组选6</td>
+                        <td colspan="3">选择2个二重号， 所选的2个二重号码在所选4个位置的开奖号码中分别出现2次</td>
+                    </tr>
+                    <tr>
+                        <td>组选4</td>
+                        <td colspan="3">选择1个三重号和1个单号，所选4个位置的开奖号码包含单号，且三重号码出现了3次</td>
+                    </tr>
+
+                    <tr><td rowspan="4">趣味玩法</td>
+                        <td>一帆风顺</td>
+                        <td colspan="3">竞猜开奖号码中包含所选号码</td>
+                    </tr>
+                    <tr>
+                        <td>好事成双</td>
+                        <td colspan="3">竞猜开奖号码中包含所选号码且出现2次</td>
+                    </tr>
+                    <tr>
+                        <td>三星报喜</td>
+                        <td colspan="3">竞猜开奖号码中包含所选号码且出现3次</td>
+                    </tr>
+                    <tr>
+                        <td>四季发财</td>
+                        <td colspan="3">竞猜开奖号码中包含所选号码且出现4次</td>
+                    </tr>
+
+                    <tr><td rowspan="10">龙虎</td>
+                        <td>万千</td>
+                        <td colspan="3">猜中万位与千位的龙虎和属性，万位＞千位为龙，万位＜千位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>万百</td>
+                        <td colspan="3">猜中万位与百位的龙虎和属性，万位＞百位为龙，万位＜百位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>万十</td>
+                        <td colspan="3">猜中万位与十位的龙虎和属性，万位＞十位为龙，万位＜十位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>万个</td>
+                        <td colspan="3">猜中万位与个位的龙虎和属性，万位＞个位为龙，万位＜个位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>千百</td>
+                        <td colspan="3">猜中千位与百位的龙虎和属性，千位＞百位为龙，千位＜百位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>千十</td>
+                        <td colspan="3">猜中千位与十位的龙虎和属性，千位＞十位为龙，千位＜十位为虎，相同则为和</td>
+                    </tr>
+                    <tr>
+                        <td>千个</td>
+                        <td colspan="3">猜中千位与个位的龙虎和属性，千位＞个位为龙，千位＜个位为虎，相同则为和</td>
+                    </tr><tr>
+                        <td>百十</td>
+                        <td colspan="3">猜中百位与十位的龙虎和属性，百位＞十位为龙，百位＜十位为虎，相同则为和</td>
+                    </tr><tr>
+                        <td>百个</td>
+                        <td colspan="3">猜中百位与个位的龙虎和属性，百位＞个位为龙，百位＜个位为虎，相同则为和</td>
+                    </tr><tr>
+                        <td>十个</td>
+                        <td colspan="3">猜中十位与个位的龙虎和属性，十位＞个位为龙，十位＜个位为虎，相同则为和</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </section>
+</div>
+</body>
+</html>

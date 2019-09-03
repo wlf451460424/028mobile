@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />  
+    <meta name="format-detection" content="email=no" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>正信永胜</title>
+    <link rel="icon" href="././images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript">
+
+        /*if(!isPhone()){
+          window.location.href='/';
+        }*/
+
+        function isPhone(){
+            var system = {
+                win: false,
+                mac: false,
+                xll: false
+            };
+            //检测平台
+            var p = navigator.platform;
+            system.win = p.indexOf("Win") == 0;
+            system.mac = p.indexOf("Mac") == 0;
+            system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+            if (system.win || system.mac || system.xll) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+    <!-- build:css css/af.css charset="utf-8"-->
+    <link rel="stylesheet" type="text/css" href="af/main.css"  />
+    <link rel="stylesheet" type="text/css" href="af/appframework.css"  />
+    <link rel="stylesheet" type="text/css" href="af/lists.css"  />
+    <!-- endbuild -->
+    <!-- build:css css/af.plugins.css charset="utf-8"-->
+    <link rel="stylesheet" type="text/css" href="af/plugins/css/af.actionsheet.css"  />
+    <link rel="stylesheet" type="text/css" href="af/plugins/css/af.popup.css"  />
+    <link rel="stylesheet" type="text/css" href="af/plugins/css/af.scroller.css"  />
+    <!-- endbuild -->
+    <!-- build:css css/app.css charset="utf-8"-->
+    <link type="text/css" rel="stylesheet" href="css/cs-select.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dropdown.css" />
+    <link type="text/css" rel="stylesheet" href="css/lotteryCss.css" />
+    <link type="text/css" rel="stylesheet" href="css/hcp_lotteryCss.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile-select-date.css" />
+    <link rel="stylesheet" type="text/css" href="css/validCodeUtil.css" />
+    <!-- endbuild -->
+    <!--
+        要使用jquery，注意加载顺序 1.jquery.js 2.jq.appframework.js3.appframework.ui.js
+      -->
+    <!-- build:js js/jq.js charset="utf-8"-->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/jq.af.js charset="utf-8"-->
+    <script type="text/javascript" charset="utf-8" src="af/jq.appframework.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/af.js charset="utf-8"-->
+    <script type="text/javascript" charset="utf-8" src="af/appframework.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/af.ui.js charset="utf-8"-->
+    <script type="text/javascript" charset="ut-f8" src="af/ui/appframework.ui.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/af.plugins.js charset="utf-8"-->
+    <script type="text/javascript" src="af/plugins/af.actionsheet.js"></script>
+    <script type="text/javascript" src="af/plugins/af.css3animate.js"></script>
+    <script type="text/javascript" src="af/plugins/af.scroller.js"></script>
+    <script type="text/javascript" src="af/plugins/af.touchEvents.js"></script>
+    <script type="text/javascript" src="af/plugins/af.touchLayer.js"></script>
+    <script type="text/javascript" src="af/plugins/af.popup.js"></script>
+    <script type="text/javascript" src="af/plugins/af.desktopBrowsers.js"></script>
+    <script type="text/javascript" src="af/ui/transitions/slide.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/libs.js charset="utf-8"-->
+    <script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/jquery.cityselect.js"></script>
+    <script type="text/javascript" src="js/selectFx.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/mobile-select-date.js"></script>
+    <script type="text/javascript" src="js/bignumber.min.js"></script>
+    <script type="text/javascript" src="js/echarts.common.min.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/validCodeUtil.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/utils.js charset="utf-8"-->
+    <script type="text/javascript" src="js/common/panelParamConfig.js"></script>
+    <script type="text/javascript" src="js/common/commonUtil.js"></script>
+    <script type="text/javascript" src="js/common/global.js"></script>
+    <script type="text/javascript" src="js/common/lotteryConfig.js"></script>
+    <script type="text/javascript" src="js/common/lotteryUtil.js"></script>
+     <script type="text/javascript" src="js/common/lottery_hcp_Config.js"></script>
+    <script type="text/javascript" src="js/common/lottery_hcp_Utils.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+        window.onerror = function(errorMessage, scriptURI, lineNumber) {
+            log.a(errorMessage + "<br>" + scriptURI + "<br>" + lineNumber);
+        };
+        /*
+       //为了在桌面浏览器中测试，添加此段脚本，在智能设备中可以去掉
+        if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+            var script = document.createElement("script");
+            script.src = "af/plugins/af.desktopBrowsers.js";
+            var tag = $("head").append(script);
+        }
+        //设置加载的主题样式: ios android win8 tizen BB10 ios7这几种可以自行设置
+        $.ui.ready(function(){
+        });
+        */
+        //显示前执行()
+        $(document).ready(function(){
+            $.ui.splitview=false;
+            $.ui.autoLaunch=false;
+            $.ui.launch();
+            $.ui.setRightSideMenuWidth("200px");
+        });
+
+        //@ 读取 config.json 文件
+        var android_url,  //Android 客户端下载包地址
+	        ios_url,  // iOS 客户端下载包地址
+	        trend_url, //走势图地址
+            platform_url,  //手动开户后提示的平台地址
+            testLine_url,  //手动开户后提示的测速地址
+            arrLines, //线路检测地址
+            min_Money;//投注最低金额  （只用于腾讯分分彩）
+
+	        $.getJSON("config.json",function (data) {
+	        android_url = data["android_url"];
+	        ios_url = data["ios_url"];
+	        trend_url = data["trend_url"];
+	        platform_url = data["platform_url"];
+	        testLine_url = data["testLine_url"];
+            arrLines = data["arrLines"];
+            min_Money = data["min_Money"];
+        });
+
+       /* $(function() {
+            FastClick.attach(document.body);
+        });*/
+
+    </script>
+</head>
+<body>
+    <div id="afui">
+<!--         <header id="personalCenterHeader">
+            <a href="#" class="icon_back" ></a>
+            <h1></h1>
+            <a href="#lotteryHallPage"  style="right:0.6em" class="home"></a>
+        </header>
+        <header id="noHomeHeader">
+            <a href="#" class="icon_back" ></a>
+            <h1></h1>
+        </header> -->
+        <div id="content">
+          <div style="position:fixed; top: 46%;left: 50%;">
+            <img src="images/ajax-loader.gif" style="width: 76px;height: 76px;margin: -38px -38px;"/>
+            <h4 style="position: relative;top:100%;left:0%;width: 200px;font-size: 14px; margin:50px 0 -100px -60px;">正在加载中，请稍后...</h4>
+          </div>
+            <!--购彩大厅-->
+            <div id="lotteryHallPage" class="panel background_page" data-header="lotteryHallHeader" data-defer="html/personalCenter/lotteryHall.html" data-load="lotteryHallLoadedPanel" data-unload="lotteryHallUnloadedPanel" data-footer="none" selected="true">
+            </div>
+            <script type="text/javascript">
+                pageName = window.location.hash;
+                createPanelHtml_Fun(pageName);
+                delete pageName;
+            </script>
+        </div>
+    </div>
+</body>
+<!-- build:js js/app.js charset="utf-8"-->
+<script type="text/javascript" src="js/personalCenter/lotteryHall.js"></script>
+<script type="text/javascript" src="js/personalCenter/activityDetail/activity_2.js"></script>
+<script type="text/javascript" src="js/personalCenter/activityDetail/activity_3.js"></script>
+<script type="text/javascript" src="js/personalCenter/activityDetail/activity_5.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/activityDetail/new_activity_1.js"></script>
+<script type="text/javascript" src="js/personalCenter/activityDetail/new_activity_2.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/linetest.js"></script>
+<script type="text/javascript" src="js/personalCenter/activity.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/myLottery.js"></script>
+<script type="text/javascript" src="js/personalCenter/changeHeadPortrait.js"></script>
+<script type="text/javascript" src="js/personalCenter/select.js"></script>
+<script type="text/javascript" src="js/personalCenter/agreementPage.js"></script>
+<script type="text/javascript" src="js/personalCenter/loginPage.js"></script>
+<script type="text/javascript" src="js/personalCenter/RetrievePwd.js"></script>
+<script type="text/javascript" src="js/personalCenter/gonggao.js"></script>
+<script type="text/javascript" src="js/personalCenter/gonggaoDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/charge.js"></script>
+<script type="text/javascript" src="js/personalCenter/chargeDetailConfirm.js"></script>
+<script type="text/javascript" src="js/personalCenter/withdrawal.js"></script>
+<script type="text/javascript" src="js/personalCenter/transfer.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/stationEmail/EmailLists.js"></script>
+<script type="text/javascript" src="js/personalCenter/stationEmail/EmailDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/stationEmail/sendEmail.js"></script>
+<script type="text/javascript" src="js/personalCenter/stationEmail/receiverLists.js"></script>
+<script type="text/javascript" src="js/personalCenter/stationEmail/viewReceiver.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/records/myZhuihaoRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myAccountRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myBettingRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myBettingRecordsPK.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myWinRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myChargeRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myWithdrawalRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myTransferRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myVrTransferRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/records/myReportRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/gamePersonalReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/accountDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/zhuiHaoBettingOrderDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/bettingOrderDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/chargeRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/transferRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/VrTransferRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/bettingDetil.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/withdrawalRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/teamBettingOrderDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/schemeDetail/teamAccountDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/personalInfo.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/modifyInfo.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/modifyBankPassword.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/modifyPassword.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/modifyBankInfo.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/showBankInfo.js"></script>
+<script type="text/javascript" src="js/personalCenter/userInfo/setSecurity.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyManage.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/subordinateManage.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/registerSubordinate.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/registerByLink.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/registerByLinkDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyMember.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyMemberDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyUpgrade.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyAccountRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyAccountRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyBettingRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyBettingRecordPK.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyBettingDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyCharge.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/settingDailywages.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/sharingPrizePool.js"></script>
+
+<script type="text/javascript" src="js/personalCenter/proxy/proxyLimit.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/proxyLimitDetails.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamSummary.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamBetting.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamAccount.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamCharge.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamChargeDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamWithdrawal.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamWithdrawalDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamReportSelf.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamReportSubordinate.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamReportSubordinateDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/proxy/teamReportAll.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/teamGameReportSelf.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/teamGameReportSubordinate.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/teamGameReportSubordinateDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/teamGameReportAll.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/gameReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/game/thirdReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/personalReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/personalPersonalReport.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/teamPersonalReportSelf.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/teamPersonalReportSubordinate.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/teamPersonalReportSubordinateDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/vr/teamPersonalReportAll.js"></script>
+<script type="text/javascript" src="js/checkout/checkOutPage.js"></script>
+<script type="text/javascript" src="js/checkout/hcp_checkOutPage.js"></script>
+<script type="text/javascript" src="js/checkout/mmccheckOutPage.js"></script>
+<script type="text/javascript" src="js/checkout/zhuiHaoPlan.js"></script>
+<script type="text/javascript" src="js/personalCenter/help.js"></script>
+
+<!--<script type="text/javascript" src="js/personalCenter/contract/contractManage.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/dailyWagesContractThree.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/dailyWagesRecordsThree.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/fenHongContract.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/fenHongRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/fenHongRecordsDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/dailyWagesRecordsThreeDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/modifyContract.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/modifyDailyWagesThree.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/MyfenHongContract.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/MyDailyWagesContractThree.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/fenHongSettle.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/lossDailyWagesRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/contract/lossDailyWagesRecordsDetail.js"></script>-->
+
+<script type="text/javascript" src="js/personalCenter/newContract/contractManageNew.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/dailyWagesNewList.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/dailyWagesRecordsNew.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/dailyWagesRecordsNewDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/bonusList.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/bonusRecords.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/bonusRecordsDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/modifyBonus.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/modifyDailyWagesNew.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/myBonus.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/myDailyWagesNew.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/bonusSettle.js"></script>
+<script type="text/javascript" src="js/personalCenter/newContract/systemReport.js"></script>
+
+<!--发红包，抢红包-->
+<script type="text/javascript" src="js/personalCenter/redPacket/myRedPacket.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/sendRedPacket.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/sendRedPacketRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/sendRedPacketRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/getRedPacketRecord.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/getRedPacketRecordDetail.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/chooseSendPerson.js"></script>
+<script type="text/javascript" src="js/personalCenter/redPacket/searchSendPerson.js"></script>
+
+<!--彩种 -->
+<script type="text/javascript" src="js/gpcJS/cqklsf.js"></script>
+<script type="text/javascript" src="js/gpcJS/shssl.js"></script>
+<script type="text/javascript" src="js/gpcJS/bjklb.js"></script>
+<script type="text/javascript" src="js/gpcJS/beijklb.js"></script>
+<script type="text/javascript" src="js/gpcJS/hgklb.js"></script>
+<script type="text/javascript" src="js/gpcJS/twklb.js"></script>
+<script type="text/javascript" src="js/gpcJS/taiwklb.js"></script>
+<script type="text/javascript" src="js/gpcJS/pks.js"></script>
+<script type="text/javascript" src="js/gpcJS/jsks.js"></script>
+<script type="text/javascript" src="js/gpcJS/ahks.js"></script>
+<script type="text/javascript" src="js/gpcJS/hbks.js"></script>
+<script type="text/javascript" src="js/gpcJS/jlks.js"></script>
+<script type="text/javascript" src="js/gpcJS/cqssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/hnssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/hnwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/hnffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/bianffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/hljssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/gdesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/ahesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/jsuesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/shesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/jsffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/bxwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/djydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/jndsdwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/txffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/tenxunffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/txlfcd.js"></script>
+<script type="text/javascript" src="js/gpcJS/txlfcs.js"></script>
+<script type="text/javascript" src="js/gpcJS/txsfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/txwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/wbyfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/wbwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/txsc.js"></script>
+<script type="text/javascript" src="js/gpcJS/qqffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/twwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/taiwwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/jxesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/sdesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/jsesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/ksesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/jssfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/xjssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/tjssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/bjssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/beijssc.js"></script>
+<script type="text/javascript" src="js/gpcJS/wxydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/tenxffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/wbffc.js"></script>
+<script type="text/javascript" src="js/gpcJS/ldydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/hgydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/blydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/blanydwfc.js"></script>
+<script type="text/javascript" src="js/gpcJS/mmc.js"></script>
+<script type="text/javascript" src="js/gpcJS/xjplfc.js"></script>
+<script type="text/javascript" src="js/szcJS/fcsd.js"></script>
+<script type="text/javascript" src="js/szcJS/ffsd.js"></script>
+<script type="text/javascript" src="js/szcJS/pls.js"></script>
+<script type="text/javascript" src="js/szcJS/plw.js"></script>
+<script type="text/javascript" src="js/gpcJS/xyft.js"></script>
+<script type="text/javascript" src="js/gpcJS/hljesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/hebesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/lnesf.js"></script>
+<script type="text/javascript" src="js/gpcJS/xjesf.js"></script>
+
+<!--彩种 -->
+<script type="text/javascript" src="js/lotteryHCP/hcpSsc.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpEsf.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpKlb.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpKs.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpXync.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpPks.js"></script>
+<script type="text/javascript" src="js/lotteryHCP/hcpHelp.js"></script>
+
+<!--开奖结果-->
+<script type="text/javascript" src="js/award/awardHall.js"></script>
+<script type="text/javascript" src="js/award/awardHistory.js"></script>
+<!-- endbuild -->
+</html>

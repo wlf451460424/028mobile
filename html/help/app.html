@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正信永胜客户端下载</title>
+</head>
+<script type="application/javascript">
+    $("#android_download").on("click",function () {
+        window.location.href = android_url;
+    });
+    $("#ios_download").on("click",function () {
+        window.location.href = ios_url;
+    });
+</script>
+<body>
+    <!--content部分-->
+    <!--<div style="background:url(images/app/app_bg1.png) no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;">-->
+	<div style="background:url(images/app/app_bg1.png) no-repeat center;width: 100%; height:385px ;background-size: 1920px 385px;">
+        <div style="text-align:center;margin-bottom: 30px;">
+            <img src="././images/app/logo.png" style="width: 100px; height: 120px; margin-top: 30px;"/>
+        </div>
+        <div style="width: 100%;text-align:center;margin-bottom: 30px">
+	        <img src="././images/app/app_bg2.png" style="width: 300px;height: 240px;"/>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <!--<span style="text-align: center;font-size: 26px;color: #FFFFFF;">正信永胜</span>-->
+            <!--<div style="margin: 20px;font-size: 22px;color: #fff;">正心诚意 &nbsp;&nbsp;&nbsp;信之源泉</div>-->
+        </div>
+        <!--<a class="button icon" style="margin-left: 10px;width: 26%;height: 120px;" onclick="createInitPanel_Fun('lotteryHallPage');">
+            <img src="././images/app/Web.png" style="margin-top:-4px;width: 20px;height: 20px;margin-right: 10px"/>
+        </a>
+        <a id="android_download" style="margin-left: 10px;width: 26%;height: 120px;">
+            <img src="././images/app/Android.png" style="margin-top:-4px;width: 24px;height: 24px; margin-right: 10px"/>
+        </a>
+        <a id="ios_download" style="margin-left: 10px;margin-right: 10px;width: 26%;height: 120px;">
+            <img src="././images/app/iOS.png" style="width: 75px;height: 100px;"/>
+        </a>-->
+        
+        <div style="width: 100%;text-align: center;">
+	        <img src="././images/app/Web.png" style="width: 26%; min-width: 100px;max-width: 200px;  height: 130px;" onclick="createInitPanel_Fun('lotteryHallPage');"/>
+	        <img id="android_download" src="././images/app/Android.png" style="width: 26%; min-width: 100px;max-width: 200px;  height: 130px;margin-left: 20px;margin-right: 20px;"/>
+	        <img id="ios_download" src="././images/app/iOS.png" style="width: 26%; min-width: 100px;max-width: 200px; height: 130px;"/>
+        </div>
+        <br/>
+        <p style="color:#666666;text-align: left; padding:0 10px;">iOS版APP信任步骤：</p>
+        <p style="color:#666666;text-align: left; padding:0 10px;">进入【设置】 &#10154 【通用】 &#10154 【描述文件与设备管理】 &#10154 找到对应证书 &#10154 点击信任 &#10154 回到桌面打开APP</p>
+    </div>
+</body>
+</html>

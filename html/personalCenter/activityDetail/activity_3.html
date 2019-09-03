@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>签到送礼</title>
+	<style>
+        #singe_btn_3{ display:block; 
+			width: 100px;
+			height:40px; 
+		}
+		
+		.signIn_box li{ float:left; padding-right:4px; width:14%; height:56px; text-align:center; position:relative;}
+		.signIn_box li:first-child{ width:26px;}
+		.signIn_box li:first-child:after{ width:0; display:none;}
+		.signIn_box li:after{ content: ''; float:left; margin-right: 4px; height: 2px; width: 80%; background-color: #bfbfbf; border-radius:4px;}
+		.signIn_box li span{ float:right; margin-top:-4px; width:7px; height:7px; border-radius:50%; background:#bfbfbf;}
+		.signIn_box li p{ margin-right:-10px!important; height:36px; text-align:right; font-size:14px; color:#bfbfbf;}
+		.signIn_box li img{ position:absolute; right:-2px; top:37px; width: 20px;height: 20px;}
+		.signIn_box li.active:after{ background-color:#dfd5f4;}
+		.signIn_box li.active span{ background:#8159d4;}
+		.signIn_box li.active p{ color:#8159d4;}
+	</style>
+</head>
+<body>
+	<!--header头部-->
+	 <header id="activity_3Header">
+	 	<a onclick="createInitPanel_Fun('activity');" class="icon_back" ></a>
+        <h1 >签到送礼</h1>
+    </header>
+   <!--content部分-->
+		<div>
+			<img src="images/web-banner_activity3.png" style="width: 100%; "/><br />
+		</div>
+		
+		<div style="line-height: 85px;margin-top: -90px;font-size: 13px;color: #FFFFFF;padding-left: 10px;">
+			<span>2019-07-01~结束提前24小时通知</span>
+		</div>
+		
+		
+		<div style="display:inline-block;line-height:60px;width: 100%;position:relative; padding-top: 10px;">
+   			<div style="float:left;margin-top: 5px;">
+				<p class="whitetext" style="color: #8159d4;font-size:16px;font-weight:bold;"><img src="images/signIn_icon_01.png" style="widows: 23px;height: 23px;padding-right: 10px;margin-top: -7px;"/><span style="color: #000000;">您已连续签到 ：</span><span id="singeDays_3">--</span>  天</p>
+        	</div>
+        	<div style="float:right;margin-right: 10px;">
+        		<img id="singe_btn_3"  src="images/singe_3_show.png" >
+   			</div>
+		</div>
+		<div style="margin: 0 auto; color: #666666; line-height: 40px; padding-bottom: 10px;">
+			<p class="whitetext">当日投注金额≥2000元即可签到。连续签到7天后，系统自动派奖 </p>
+		</div>
+		
+		<div id="signIn_box" class="signIn_box" style="padding: 0 10px 0 10px;">
+			<ul id="clearfix" class="clearfix">
+            	<li class="active"><p>1天</p><span></span></li>
+            	<li class="active"><p>2天</p><span></span></li>
+            	<li class="active"><p>3天</p><span></span></li>
+            	<li><p>4天</p><span></span></li>
+            	<li><p>5天</p><span></span></li>
+            	<li><p>6天</p><span></span></li>
+            	<li><p style="padding-right:10px;">7天</p><img src="images/signIn_icon_02.gif"></li>
+            </ul>
+		</div>
+    	
+    	
+        <div style="display:inline-block;width: 100%;  padding-top: 10px;">
+			<div style="font-weight: bold;float:left;margin-left: 10px;border: 1px solid #8159d4; border-radius:5px; height: 80px;width: 45%;text-align: center;">
+	        	<p class="whitetext" style="color: #8159d4;padding-top: 15px;"><span>当前投注金额：<br/></span><span id="BuyMoney_3">--</span>&nbsp;&nbsp;元</p>
+	        </div>
+	        <div style="font-weight: bold;float:right;margin-right: 10px;border: 1px solid #09b38f;border-radius:5px; height: 80px;width: 45%;text-align: center;">
+	        	<p class="whitetext" style="color: #09b38f;padding-top: 15px;"><span>累计签到销量：<br/></span><span id="RechargeMoney_3">--</span>&nbsp;&nbsp;元</p>
+	        </div>
+        </div>
+        
+        
+        
+		<!--<div style='word-wrap:break-word; word-break:break-all;display:block;width: 94%;margin-left: 10px;margin-right: 10px;margin-top: 20px;'>-->
+		<div style="display:inline-block;margin: 20px 10px 10px 10px;">
+			<!--<div style="margin-bottom: 15px;">
+				<span style="font-weight: bold;color: #8159d4;" >活动时间：</span><br/>
+	        	<span>2019-06-28~结束提前24小时通知 。 </span>
+			</div>-->
+			<div style="margin-bottom: 15px;">
+				<span style="font-weight: bold;color: #8159d4;" >活动内容：</span><br/>
+				当日投注金额≥2000元即可签到。连续签到7天后，系统自动派奖，奖励7天总销量的千分之1。例如：2019年7月1号开始签到，1号签到时投注量5万，2号签到时投注量2万，3号签到时投注量6万，4号签到时投注量1万，5号签到时投注量8万，6号签到时投注量4万，7号签到时投注量9万。那么7号签到后会得到：总销量35万乘以千分之1即350元的奖励。
+				<br/>
+			</div>	
+			
+			<div style="margin-bottom: 10px;">
+				<span style="font-weight: bold;color: #8159d4;" >活动规则：</span><br/>
+			</div>
+			<div class="div_guize">
+				1.累计签到销量为每日签到时的投注金额总和，签到后投注的金额不计算在当日销量内；<br/>
+				2.必须是连续7天签到才可领取奖金，中途中断签到，须重新开始计算累计天数和销量；<br/>
+				3.达标后应在当天23:59:59前签到，第二天数据清空，重新统计；<br/>
+				4.每期总投注号码不能超过70%，如发现违规操作情况，均视作放弃本次活动；<br/>
+				5.相同IP地址、相同安全信息的用户只能申请一次,当天登录IP超过5个,同IP下账户超过2个不可申请此活动；<br/>
+				6.活动最终解释权归正信永胜所有。<br/>
+			</div>
+        </div>
+		<!--<div align="center" style="padding-top: 10px;">
+		    <img id="singe_btn_3" src="images/singe_show.png" >
+		</div>-->
+	    <br/>
+	    
+	
+	
+</body>
+</html>

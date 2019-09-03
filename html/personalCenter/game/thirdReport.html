@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="thirdReportHeader">
+    <a  id="thirdReportBackId" class="icon_back" ></a>
+    <h1 >其它报表</h1>
+    <!--<a href="#" id="querythirdReportButtonID" style="right:0.4em" class="search"></a>-->
+</header>
+
+<!--content部分-->
+<div class="content">
+    <div class="select_condition" id="selectthirdReportID"></div>
+
+    <div id="thirdReport_nav_scroller" style="overflow:hidden;border-bottom: 1px solid #ddd;">
+        <div id="thirdReport_navigationLabel" class="teamReportrecordList_daohang"></div>
+    </div>
+
+    <div id="thirdReportScroller" style="position: absolute;width: 100%;top:130px;bottom:2px;overflow: hidden;">
+        <span style="margin:10px 8px 0; font-weight: bold;display: block;">团队合计   <span style="color:#666666;" id="thirdReportTotal_tip"></span></span>
+        <div id="thirdReportTotal"></div>
+
+        <span style="margin:10px 8px 0; font-weight: bold;display: block;">自身统计   <span style="color:#666666;" id="thirdReportMy_tip"></span></span>
+        <div id="thirdReportMy"></div>
+
+        <div id="xiaji_div">
+            <span style="margin:10px 8px 0; font-weight: bold;display: block;">下级：</span>
+            <div class="teamReportrecordList_walletTop" style="margin:0 5px 10px;">
+                <ul class="mylist" id="thirdReportList"></ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

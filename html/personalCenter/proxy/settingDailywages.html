@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="settingDailywagesHeader">
+    <a onclick="goBack.subordinateManage();" class="icon_back" ></a>
+    <h1 >日结设置</h1>
+</header>
+
+<!--content部分-->
+    <div class="content">  
+		<div class="dailyWages">
+		<p>我的日结比例：<span id="myDailywages"></span></p>
+		<p>下级 <span id="subordinateName"></span> 日结比例：<span id="subordinateBili"></span></p>
+		<p>当前状态：<span id="dailywagesState"></span></p>
+		</div>
+		<div class="changeDailywages">
+			<p>修改下级日结比例：</p>
+			<select name="changeBili" id="changeBili">
+			</select>
+		</div>
+		<a  class="loginBtn" id="dailywageSubmit">保存</a>
+    </div>
+</body>
+</html>

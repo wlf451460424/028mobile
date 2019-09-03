@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<!--header头部-->
+	<header id="bettingOrderDetailsHeader">
+		<meta charset="UTF-8">
+		<a onclick="getPanelBackPage_Fun();" id="huodong_back" class="icon_back" ></a>
+	    <h1 >订单详情</h1>
+	</header>
+	<body>
+		<div class="recordDetail">
+			<ul>
+				<li>
+					订单号：
+					<span id="orderDetails_Id"></span>
+				</li>
+				<li>
+					流水号：
+					<span id="bettingorderID"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="orderdetail">
+			<table>
+				<tr>
+					<td id="fanDian_title">投注返点：<span id="fanDian"></span></td>
+					<td>投注模式：<span id="payMode"></span></td>
+				</tr>
+				<!--<tr>
+					<td>中奖后停止追号：<span id="winIsStop"></span></td>
+				</tr>-->
+				<tr>
+					<td>时间：<span id="datetime"></span></td>
+				</tr>
+			</table>
+		</div>
+		<!--Add 投注详单 -->
+		<div id="orderwrapper" style="padding-bottom: 30px;">
+			<ul  id="orderListCard"></ul>  <!--- 投注详单标题 --->
+			<div id="cardContent" class="recordDetail" style="margin:0px 8px 5px 8px;border-radius: 3px;border: 1px solid #FE5D39;padding:10px;"></div>    <!--- 投注详单内容 --->
+			<ul  id="orderList"></ul>  <!--- 撤单 --->
+		</div>
+	</body>
+</html>
+	

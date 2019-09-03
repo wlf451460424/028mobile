@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="teamWithdrawalDetailHeader">
+    <a onclick="setPanelBackPage_Fun('teamWithdrawal');" class="icon_back" ></a>
+    <h1 >团队提款详情</h1>
+</header>
+
+<!--content部分-->
+    <div class="content">  
+		<div class="recordDetail">
+			<ul>
+				<li>
+					订单号：
+					<br />
+					<span id="orderId_tk"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="recordDetailBottom">
+			<ul class="recordDetail">
+				<li> 账户：<span id="account_tk"></span>	</li>
+
+				<li> 提款金额：<span id="money_tk"></span> </li>
+
+				<!--<li> 提款方式：<span id="type_tk"></span>	</li>-->
+
+				<li> 提款状态：<span id="state_tk"></span> </li>
+
+				<li> 交易时间：<span id="datetime_tk"></span> </li>
+
+				<li style="word-break: break-all;"> 备注：<span id="details_tk"></span>	</li>
+			</ul>
+		</div>		
+    </div>
+</body>
+</html>

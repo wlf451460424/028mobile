@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="EmailListsHeader">
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>站内信</h1>
+    <a style="right:0.6em;top:0.6em;" onclick="createInitPanel_Fun('sendEmail',true);">发消息</a>
+</header>
+<!--切换标签页-->
+<div>
+    <ul id="EmailStyle" class="EmailStyle">
+        <li id="getEmailBtn">收件箱</li>
+        <li id="sendEmailBtn">发件箱</li>
+    </ul>
+</div>
+<!--content部分-->
+<div>
+    <div id="noEmails" class="noEmailPage">当前没有消息哦(⊙o⊙)</div>
+    <div id="hasEmails" style="display: none;">
+        <!--消息列表-->
+        <div id="EmailContentScroller" class="emailContent" style="position: absolute;width: 100%;top:45px;bottom:2px;overflow: hidden;">
+            <ul id="messageLists" class="msgLists"></ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<header id="systemReportHeader">
+    <a onclick="goBack.contractManage();" class="icon_back"></a>
+    <h1>制度报表</h1>
+</header>
+
+<div>
+    <div class="select_condition" id="systemReport_selectDate"></div>
+	
+    <div id="systemReport_nav_scroller" style="overflow:hidden;border-bottom: 1px solid #ddd;">
+        <div id="systemReport_navigationLabel" class="teamReportrecordList_daohang" style="color: red;"></div>
+    </div>
+
+    <div id="systemReportScroller" style="position: absolute;width: 100%;top: 90px;bottom:2px;overflow: hidden;">
+        <span style="margin:10px 10px 0; font-weight: bold; display: block;">团队合计   <span style="color:#666666;" id="systemReportTotal_tip"></span></span>
+        <div id="systemReportTotal"></div>
+
+        <span style="margin:10px 10px 0; font-weight: bold; display: block;">自身统计   <span style="color:#666666;" id="systemReportMy_tip"></span></span>
+        <div id="systemReportMy"></div>
+
+        <div id="xiaji_div" style="margin-top: 10px;">
+            <span style="margin:10px 10px 0; font-weight: bold; display: block;">下级：</span>
+            <div class="teamReportrecordList_walletTop" style="margin:0 5px 10px;padding:0;">
+                <ul class="mylist" id="systemReportList">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

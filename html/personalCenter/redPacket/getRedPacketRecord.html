@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+	<!--header头部-->
+	<header id="getRedPacketRecordHeader">
+	 	<a onclick="goBack.myRedPacket();" class="icon_back"></a>
+        <h1>领取记录</h1>
+    </header>
+
+    <!--content部分-->
+	<div class="get-redPak-content">
+		<div class="select_condition" id="selectDate_getRedPacket">
+		</div>
+		<p>
+			<span>总金额：<b id="get_total_Money">0</b>元</span><span>红包个数：<b id="get_total_Num">0</b>个</span>
+		</p>
+		<p>
+			<span>手气最佳：<b id="get_BestOfluck">0</b>个</span><span>待领红包：<b id="get_Unreceived_Num">0</b>个</span>
+		</p>
+	</div>
+
+	<div id="getRedPacketRecordScroller"  style="position: absolute;width: 100%;top:100px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="getRedPacketRecordList">
+		</ul>
+	</div>
+
+</body>
+</html>

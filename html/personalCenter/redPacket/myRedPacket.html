@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<!--header头部-->
+<header id="myRedPacketHeader">
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>我的红包</h1>
+</header>
+
+<!--content部分-->
+<div style="padding-bottom:1rem">
+
+    <div class="myLotteryList" id="is_show_redPak">
+        <ul>
+            <li>
+                <a onclick="click_send_red_packet()">发红包<span class="btnRight"></span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="margin:10px 12px 0;"><b>· 我的红包记录 </b></div>
+    <div class="myLotteryList">
+        <ul>
+            <li id="is_show_sendRed_record">
+                <a onclick="createInitPanel_Fun('sendRedPacketRecord')">派发记录<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('getRedPacketRecord')">领取记录<span class="btnRight"></span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

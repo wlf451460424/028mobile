@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="hcpSscPageHeader">
+    <a id="hcpSscPage_back" class="icon_back"></a>
+    <h1 id="hcpSsc_title"></h1>
+    <a class="right2" onclick="createInitPanel_Fun('lottery_hcpSsc_help',true);"></a>
+</header>
+
+<div id="hcpSscSelect">
+    <select class="cs-select cs-skin-overlay" id="hcpSscPlaySelect">
+    </select>
+</div>
+
+<div class="timeFC">
+    <span id="hcpSsc_qihao"></span>
+    <span id="hcpSsc_timer"></span>
+</div>
+
+<div id="hcpSsc_prizelist" class="jq-dropdown jq-dropdown-tip has-icons">
+    <div class="jq-dropdown-panel">
+    </div>
+</div>
+
+<div class="InfoContent">
+    <a class="choice" id="hcpSsc_random"><img src="images/yaoyiyao.png" /> 点击机选</a>
+    <span class="choice"  data-jq-dropdown="#hcpSsc_prizelist" style="float: right; margin-right: 10px;"><img src="images/refresh.png" />近期开奖</span>
+</div>
+
+<div data-role="content">
+    <div id="hcpSscContent" style="position:absolute; top:150px;bottom:10px;overflow: hidden; width:100%;">
+        <div class="InfoContent" id="hcpSsc_ballView">
+        </div>
+    </div>
+</div>
+
+<!--footer底部  -->
+<footer id='hcpSscPageFooter'>
+    <div style="text-align: center">
+        <div id="hcpSsc_qingkong" class="hcp_leftBtn">重选</div>
+        <div id="hcpSsc_queding" class="hcp_rightBtn">选号</div>
+        <div class="hcp_footerInput">
+            <input type="tel" maxlength="9" id="hcpSsc_money" placeholder="输入金额" onkeyup="this.value=this.value.replace(/\D/g,'')">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

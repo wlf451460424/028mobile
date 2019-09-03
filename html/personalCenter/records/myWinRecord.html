@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>中奖记录</title>
+</head>
+<body>
+	<!--header头部-->
+	<header id="myWinRecordHeader">
+	 	<a onclick="goBack.myLottery();" class="icon_back" ></a>
+        <h1>中奖记录</h1>
+		<div class="selectType" id="selectType_win"></div>
+    </header>
+    <!--content部分-->
+	<div class="select_condition" id="selectID_myWinRecord">
+
+	</div>	   	
+	<div id="myWinRecordScroller"  style="position: absolute;width: 100%;top:45px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="myWinRecordList">
+		</ul>
+	</div>
+	<div id="myWinRecord_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+		<img src="images/noData.png" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>登录</title>
+</head>
+<body >
+	<header id="loginPageHeader" >
+		<h1></h1>
+	</header>
+	
+	<div style="background: url(images/login_bg.png) no-repeat; background-size:cover; padding-bottom: 56%;">
+		 <!--Logo-->
+	    <div  style="padding-top:70px;text-align: center;">
+	    	<a>
+	            <img src="././images/loginHead.png" style="width: 240px;height: 60px;margin-bottom: 40px"/>
+	        </a>
+	    </div>
+	    <!--Input-->
+		<div id="loginInput" class="loginInput">
+	        <p>
+	            <input type="text" id="username" placeholder="请输入您的账号" maxlength="16" onkeyup="inputUserName(this);" onblur="inputUserName(this);" />
+	        </p>
+	        <p>
+	            <input type='password' id="passwd" placeholder="请输入您的密码" maxlength="16"/>
+	        </p>
+	        <!--<p>
+	            <input type='text' id="validateCode" placeholder="请输入验证码" />
+	            <img id="myCode" onclick="showCode()"/>
+	        </p>-->
+	        
+	        <p>
+	            <input type="text" readonly id="validateCode" onclick="openSlideCode()" value="点击完成验证">
+	        </p>
+	        <!--验证码显示-->
+			<div id="imgscode" style="display: none;"></div>
+	        <input type="hidden" id="_valid_code_result"/>
+	        
+	        
+	        <p id="IsShowGoogleCode" style="display: none">
+	            <input type="text" id="GoogleCode" placeholder="请输入GA动态密码" maxlength="6" oninput = "value=value.replace(/[^\d]/g,'')">
+	        </p>
+	        <div style="display: inline-flex;width: 100%;margin-top: 20px;margin-bottom: 20px;">
+	        	<div style="text-align: left; width: 50%;padding-left: 10px;">
+	        		<input type="checkbox" checked="checked" id="isRememberPwd"><label style="height:30px; line-height:20px; color:#dadada;" for="isRememberPwd">记住密码</label>
+	        	</div>
+	        	<div style="width: 50%;text-align: right; padding-right: 20px;">
+	        		<a style="color: #dadada;height:30px;line-height:30px; " onclick="createInitPanel_Fun('RetrievePwd')">忘记密码？</a>
+	        	</div>
+	        </div>
+	        
+	        
+	        <!--<div class="login-link">
+	            <p style="text-align: center;">
+					<input type="checkbox" checked="checked" id="isRememberPwd"><label style="text-align: left; margin:8px 0 0 0;width:40%;height:30px;color:#dadada;" for="isRememberPwd">记住密码</label>
+	                <a style="text-align: right; padding-right: 20px; width: 40%;height:45px;line-height: 50px; float: right;color:#dadada;" onclick="createInitPanel_Fun('RetrievePwd')">忘记密码</a>
+	            </p>
+	        </div>-->
+	
+	        <a class="loginBtn" id="loginbtn" style="margin:40px 20px;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+			
+	        <!--Link-->
+	        <div class="login-link" style="margin-top: 5px;">
+	            <p style="text-align: center;color: #dadada!important;">
+	                <a style="text-align: left;color: #dadada!important;" onclick="createInitPanel_Fun('lineTest')">线路检测</a>
+	                <!--<a onclick="createInitPanel_Fun('RetrievePwd')">忘记密码？</a>-->
+	                <a style="text-align: right;color: #dadada!important;" id="kefuID_login">联系客服</a>
+	            </p>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

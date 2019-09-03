@@ -1,0 +1,16 @@
+{
+	"min_Money":0.2,
+  	"android_url":"/Mobile/download/jhzx.apk",
+  	"ios_url":"#",
+  	"trend_url":"",
+  	"platform_url":"https://www.jhzx.com/login",
+  	"testLine_url":"https://www.jhzx.com",
+  	"arrLines":[
+  		"vip.jhzx9999.com",
+		"vip1.jhzx6688.com",
+		"VIP2.jhzx1688.com",
+		"vip168.jhzx6688.com",
+		"vip888.jhzx1688.com",
+		"vip666.jhzx9999.com"
+  ]
+}

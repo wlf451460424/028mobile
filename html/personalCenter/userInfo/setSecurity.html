@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+    <header id="setSecurityHeader" >
+        <a onclick="setPanelBackPage_Fun('personalInfo');" class="icon_back"></a>
+        <h1>密保设置</h1>
+    </header>
+
+    <div class="content">
+        <p class="whitetext">问题一：</p>
+        <select onchange="changeSecurityQue(this)" id="security_Q1"></select>
+        <p class="whitetext">答案：</p>
+        <input type="text" id="security_A1" minlength="4" maxlength="20">
+
+        <p class="whitetext">问题二：</p>
+        <select onchange="changeSecurityQue(this)" id="security_Q2"></select>
+        <p class="whitetext">答案：</p>
+        <input type="text" id="security_A2" minlength="4" maxlength="20">
+
+        <a id="security_reset" style="display: inline-block;width: 46%;margin:20px 1% 20px 2.5%" class="loginBtn">重置</a>
+        <a id="security_next" style="display: inline-block;width: 46%;margin:20px 1%" class="loginBtn">下一步</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>团队账变</title>
+</head>
+<body>
+<!--header头部-->
+<header id="teamAccountHeader">
+    <a onclick="setPanelBackPage_Fun('proxyManage');" class="icon_back" ></a>
+    <h1 >团队账变</h1>
+    <a href="#" id="teamAccountSearchBtn" style="right:0.4em" class="search"></a>
+</header>
+<!--content部分-->
+<div class="select_condition" id="teamAccountSelect">
+
+</div>
+<div id="teamAccountScroller"  style="position: absolute;width: 100%;top:90px;bottom:2px;overflow: hidden;">
+    <ul class="mylist" id="teamAccountList">
+    </ul>
+</div>
+<div id="teamAccount_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+	<img src="images/noData.png" />
+</div>
+</body>
+</html>

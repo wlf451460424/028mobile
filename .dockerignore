@@ -1,0 +1,5 @@
+node_modules
+npm-debug.log
+Desktop.ini
+.gitlab-ci.yml
+README.md

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>提款记录</title>
+</head>
+<body>
+	<!--header头部-->
+	<header id="myWithdrawalRecordHeader">
+	 	<a onclick="goBack.myLottery();" class="icon_back" ></a>
+        <h1 >提款记录</h1>
+		<div class="selectType" id="selectType_withdrawal"></div>
+    </header>
+    <!--content部分-->
+	<div class="select_condition" id="selectWithdrawalID">
+
+	</div>	   	
+	<div id="myWithdrawalRecordScroller"  style="position: absolute;width: 100%;top:45px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="myWithdrawalRecordList">
+		</ul>
+	</div>
+	<div id="myWithdrawalRecord_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+		<img src="images/noData.png" />
+	</div>
+</body>
+</html>

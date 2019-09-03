@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="proxyManageHeader">
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1 >团队管理</h1>
+</header>
+
+<!--content部分-->
+<div style="padding-bottom:1rem">
+    <div style="margin:12px 12px 0;"><b>· 注册下级 </b></div>
+    <div class="myLotteryList">
+        <ul>
+    		<li>
+                <a onclick="createInitPanel_Fun('registerSubordinate')">手动注册<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('registerByLink')">链接注册<span class="btnRight"></span></a>
+            </li>
+    	</ul>
+    </div>
+    <div style="margin:10px 12px 0;"><b>· 代理管理 </b></div>
+    <div class="myLotteryList">
+        <ul>
+            <li>
+                <a onclick="createInitPanel_Fun('teamSummary')">团队总览<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('proxyMember')">代理会员<span class="btnRight"></span></a>
+            </li>
+            <li style="display: none;">
+                <a onclick="createInitPanel_Fun('proxyLimit')">代理配额<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamBetting')">团队投注<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamAccount')">团队账变<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamCharge')">团队充值<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamWithdrawal')">团队提款<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamReport')">彩票报表<span class="btnRight"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!--<div style="margin:10px 12px 0;"><b>· 团队报表 </b></div>
+    <div class="myLotteryList">
+        <ul>
+    		<li>
+                <a onclick="createInitPanel_Fun('teamReportSelf')">自身统计<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamReportSubordinate')">下级统计<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamReportAll')">团队合计<span class="btnRight"></span></a>
+            </li>
+    	</ul>
+    </div>-->
+</div>
+</body>
+</html>

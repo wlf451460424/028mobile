@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>出票详情</title>
+</head>
+<body>
+    <header id="mmccheckOutPageHeader"  >
+        <a href="#" id="mmccheckOutPage_back" class="icon_back"></a>
+        <h1 id="ticcket_name"></h1>
+    </header>
+    <!--footer底部  -->
+    <footer id='mmccheckOutPageFooter'>
+         <div style="margin-left: 0.5rem;">
+            <a  id="mmccheckOutPage_zhuihao"   class="button grayBtn" style="display: none;">追号</a>
+            <a id="mmccheckOutPage_payout"  href="#" class="button redBtn"  style="width: 9rem;">立即开奖</a>
+             <a class="footertext" style="margin-left: 0px;">
+                 <p>
+                     <span  id="mmccheckOutPage_zhushu" style="color:#FE5D39;"></span>&nbsp;注&nbsp;共&nbsp;
+                     <span  id="mmccheckOutPage_money" style="color:#FE5D39;"></span>&nbsp;元
+                 </p>
+                 <p>
+                     余额：<span  id="mmccheckOut_lottery_money" style="color:#FE5D39;"></span>&nbsp;元
+                 </p>
+             </a>
+        </div>
+    </footer>
+    <div data-role="content">
+        <div  style="text-align: center;">
+            <a class="button icon add" id="mmccheckOutPage_shouxuan" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #E5E5E5;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px;">+ 手动选号</a>
+            <a class="button icon add" id="mmccheckOutPage_jixuan" href="#" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #E5E5E5;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px;">+ 自动选号</a>
+             <a class="button icon add" style="width: 30%;height: 30px;line-height: 13px;border: 1px solid #E5E5E5;color: #FE5D39;background: #fff;padding-left: 0px;padding-right: 0px;"  id="mmccheckOutPage_qingkong" href="#">- 清空选号</a>
+        </div>
+        <div id="mmcselectNum_list" style="position: absolute;width: 100%;top: 36px;bottom: 47px;overflow: hidden;">
+            <ul class="list inset numList" id="listviewid_mmc">
+            </ul>
+        </h3>
+        </div>
+
+        <section class="bottomBox" >
+           <div  style="text-align: center;">
+                 <table style="width: 100%;">
+                    <tbody>
+                        <tr class="tableTDClass_mmc">
+                            <td style="padding:0 10px; text-align: center;">
+                                连开<select name="continueLottery" id="continueLottery" onchange="getContinueNum()" style="padding:2px 5px 5px 3rem;width:30%; text-align: center;">
+                                <option value="1" selected="selected"> 1</option>
+                                <option value="5"> 5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>次
+                            </td>
+                        </tr>
+                    </tbody>
+             </table>
+        </div>
+        </section>
+    </div>
+</body>
+</html>

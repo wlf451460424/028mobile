@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="jsksPageHeader">
+    <a id="jsksPage_back" class="icon_back"></a>
+    <h1 id="jsks_title"></h1>
+    <a class="right2" onclick="createInitPanel_Fun('lottery_jsks_help', true);"></a>
+</header>
+
+<div id="jsksSelect">
+    <select class="cs-select cs-skin-overlay" id="jsksPlaySelect">
+    </select>
+</div>
+<div class="timeFC">
+    <span id="jsks_qihao"></span>
+    <span id="jsks_timer"></span>
+</div>
+<!--最新开奖-->
+<div id="jsks_prizelist" class="jq-dropdown jq-dropdown-tip has-icons">
+    <div class="jq-dropdown-panel">
+    </div>
+</div>
+
+<div class="InfoContent">
+    <a class="choice" id="jsks_random"><img src="images/yaoyiyao.png" /> 点击机选</a>
+    <span class="choice"  style="float: right; margin-right: 2px;"><img id="jsks_paly_shuoming" src="images/wen.png" style="width: 20px;height: 20px;"/></span>
+    <span class="choice"  data-jq-dropdown="#jsks_prizelist" style="float: right; margin-right: 5px;"><img src="images/refresh.png" />近期开奖</span>
+</div>
+<div>
+	<span id="jsks_shuoming" style="display: none;"></span>
+</div>
+<div data-role="content">
+    <div id="jsksContent" style="position:absolute; top:150px;bottom:10px;overflow:hidden; width:100%;">
+        <div class="InfoContent" id="jsks_ballView">
+        </div>
+    </div>
+</div>
+<!--footer底部  -->
+<footer id='jsksPageFooter'>
+    <div style="text-align: center">
+        <!-- <img id="jsks_queding" class="rightImgBut" src="images/icon_check_32.png" style="display:inline" /> -->
+        <div id="jsks_queding" class="lcbqBtn">选号</div>
+        <div id="jsks_qingkong" class="leftBtn">重选</div>
+        <div class="footertext">
+            <p style="font-size: 14px;line-height:20px;">
+                <span class="redtext" id="jsks_zhushu">0</span>注 &nbsp;共<span class="redtext" id="jsks_money">0</span>元
+            </p>
+            <!--底部显示的奖金和盈利，和倍数有关-->
+            <p class="awardWithBei">
+                奖金:<span class="redtext" id="jsks_minAwardWithBei"></span><span class="redtext" id="jsks_maxAwardWithBei"></span>元 | 盈利:<span class="redtext" id="jsks_minWinWithBei"></span><span class="redtext" id="jsks_maxWinWithBei"></span>元
+            </p>
+            <!--和倍数无关的奖金，用于利润率追号时获取奖金值-->
+            <p class="award">
+                当前玩法奖金:<span class="redtext" id="jsks_minAward"></span><span class="redtext" id="jsks_maxAward"></span>元
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

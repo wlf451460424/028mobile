@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>追号</title>
+    </head>
+
+<body>
+   <header id="zhuiHaoPageHeader">
+        <a href="#" id="zhuiHaoPage_back"  class="icon_back"></a>
+        <h1 id="ticcket_name_zhuiHao"></h1>
+   </header>
+    <!--footer底部  -->
+    <footer id='zhuiHaoPageFooter'>
+         <div style="text-align:center; vertical-align:central;">
+           <p class="stopFolFL">
+               <input type="checkbox" checked="checked" value="true" onchange="checkbox_zh()" id="tingZhiZhuiHaoid_zhuihao" />
+               <label for="tingZhiZhuiHaoid_zhuihao" style="font-size: 13px;left:-7px;top:0; background-color:transparent;display: inline;padding:7px 0;">
+               中奖停追
+               </label>
+           </p>
+           <a id="zhuiHaoPage_payout"  href="#" class="button redBtn">付款</a>
+           <a class="footertext" style="font-size: 13px;z-index: 10;">
+               <p>
+               共 <span  id="zhuiHaoPage_zhushu" class="redtext"></span>注&nbsp;
+                <span  id="zhuiHaoPage_money" class="redtext"></span> 元
+               </p>
+               <p> 余额：<span id="zhuiHao_lottery_money" class="redtext"></span>&nbsp;元</p>
+           </a>
+        </div>
+    </footer>
+
+   <!--追号类型 转换按钮-->
+   <div class="zhuiHaoStyle" id="zhuiHaoStyle">
+       <ul>
+           <li id="tongBeiBtn">同倍追号</li>
+           <li id="fanBeiBtn">翻倍追号</li>
+           <li id="liRunLvBtn">利润率追号</li>
+       </ul>
+   </div>
+
+   <!--各类型追号内容-->
+   <div id="zhuiHaoContent" style="position: absolute; top: 44px; bottom: 6px; overflow: hidden;left: 5px;right: 5px;">
+       <!--同倍追号-->
+       <div id="tongBeiPage" class="follow">
+           <P class="followHeader">
+               <span><small class="StartBeiShu">起始倍数</small> : <b onclick="minusOne(this,1);">-</b><input id="tongBeiMultiple" type="tel" maxlength="4" value="1" onblur="setMinMaxNum(this,1,9999)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,9999);">+</b></span>
+               <span>追期 : <b onclick="minusOne(this,1);">-</b><input type="tel" id="tongZhuiQi" maxlength="3" value="10" onblur="setMinMaxNum(this,1,120)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,120)">+</b></span>
+               <span style="height:32px;color:#FE5D39;"> &nbsp;&nbsp;提示 : 最多可追120期</span>
+               <span style="margin-top:6px;"><a id="tongBeiPlan">生成追号计划</a></span>
+           </P>
+           <div  id="tongBeiContent">
+               <table class="folNum" id="tongBeiTable">
+               <thead>
+                   <tr style="border:solid 1px #e5e5e5;height: 2.5em;">
+                       <th>序号</th>
+                       <th>期号</th>
+                       <th>倍数</th>
+                       <th>金额</th>
+                   </tr>
+               </thead>
+               </table>
+           </div>
+       </div>
+
+       <!--翻倍追号-->
+       <div id="fanBeiPage" class="follow">
+           <P class="followHeader">
+               <span><small class="StartBeiShu">起始倍数</small> : <b onclick="minusOne(this,1)">-</b><input id="fanBeiMultiple" type="tel" maxlength="4" value="1" onblur="setMinMaxNum(this,1,9999)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,9999)">+</b></span>
+               <span>隔 <input id="jumpQi" type="tel" maxlength="4" value="1" onblur="setMinMaxNum(this,1,119)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;">期 × <input id="jumpBei" type="tel" maxlength="4" value="2" onblur="setMinMaxNum(this,1,9999)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;">倍</span>
+               <span>追期 : <b onclick="minusOne(this,1)">-</b><input id="fanZhuiQi" type="tel" maxlength="3" value="10" onblur="setMinMaxNum(this,1,120)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,120)">+</b></span>
+               <span><a id="fanBeiPlan">生成追号计划</a></span>
+           </P>
+           <div  id="fanBeiContent">
+               <table class="folNum" id="fanBeiTable">
+                   <thead>
+                   <tr style="border:solid 1px #e5e5e5;height: 2.5em;">
+                       <th>序号</th>
+                       <th>期号</th>
+                       <th>倍数</th>
+                       <th>金额</th>
+                   </tr>
+                   </thead>
+               </table>
+           </div>
+       </div>
+
+       <!--利润率追号-->
+       <div id="liRunLvPage" class="follow">
+           <P class="followHeader">
+               <span><small class="StartBeiShu">起始倍数</small> : <b onclick="minusOne(this,1)">-</b><input id="liRunLvMultiple" type="tel" maxlength="4" value="1" onblur="setMinMaxNum(this,1,9999)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,9999)">+</b></span>
+               <span>最低收益率: <input id="minYield" type="tel" maxlength="5" value="50" onkeyup="this.value=this.value.replace(/\D/g,'')" onblur="setMinMaxNum(this,0,99999)" style="width:25%;background-color: #fff;">%</span>
+               <span>追期 : <b onclick="minusOne(this,1)">-</b><input id="liRunLvZhuiQi" type="tel" maxlength="3" value="10" onblur="setMinMaxNum(this,1,120)" onkeyup="this.value=this.value.replace(/\D/g,'')" style="width:25%;background-color: #fff;"><b onclick="plusOne(this,120)">+</b></span>
+               <span><a id="liRunLvPlan">生成追号计划</a></span>
+           </P>
+           <div id="liRunLvContent">
+               <table class="folNum" id="liRunLvTable">
+                   <thead>
+                   <tr style="border:solid 1px #e5e5e5;height: 2.5em;">
+                       <th>序号</th>
+                       <th>期号</th>
+                       <th>倍数</th>
+                       <th>金额</th>
+                   </tr>
+                   </thead>
+               </table>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

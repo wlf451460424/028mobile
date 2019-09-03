@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <header id="contractManageNewHeader" >
+        <a onclick="goBack.myLottery();" class="icon_back"></a>
+        <h1>契约管理</h1>
+    </header>
+
+    <div>
+        <div id="showMyDailywages" style="margin:12px 0 8px 0;"><b style="margin-left: 15px;">· 日结</b><a class="contractManageBtn" style="width: 50%" onclick="createInitPanel_Fun('myDailyWagesNew')">我的契约</a>
+            <div class="myLotteryList">
+                <ul>
+                    <li>
+                        <a onclick="createInitPanel_Fun('dailyWagesNewList')">日结契约<span class="btnRight"></span></a>
+                    </li>
+                    <li>
+                        <a onclick="createInitPanel_Fun('dailyWagesRecordsNew')">日结记录<span class="btnRight"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="showMyContract" style="margin:10px 0 12px 0;"><b style="margin-left: 15px;">· 分红</b><a class="contractManageBtn" style="width: 50%;" onclick="createInitPanel_Fun('myBonus')">我的契约</a>
+            <div class="myLotteryList">
+                <ul>
+                    <li>
+                        <a onclick="createInitPanel_Fun('bonusList')">分红契约<span class="btnRight"></span></a>
+                    </li>
+                    <li>
+                        <a onclick="createInitPanel_Fun('bonusRecords')">分红记录<span class="btnRight"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="margin:10px 0 12px 0;"><b style="margin-left: 15px;">· 报表</b>
+            <div class="myLotteryList">
+                <ul>
+                    <li>
+                        <a onclick="createInitPanel_Fun('systemReport')">制度报表<span class="btnRight"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

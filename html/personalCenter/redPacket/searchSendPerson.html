@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<!--header头部-->
+<header id="searchSendPersonHeader">
+    <a onclick="setPanelBackPage_Fun('sendRedPacket')" class="icon_back" ></a>
+    <h1>搜索对象</h1>
+    <a style="right:0.6em;top:0.6em;" onclick="search_subCommit()">确定</a>
+</header>
+
+<div class="redPackObject" >
+	<dl>
+		<a onclick="search_chooseSendType(1);">
+			<dd>
+				<div id="search_wholeId" class="checkBoxA"></div>
+				<div class="userName">整个团队</div>
+			</dd>
+		</a>
+		<a onclick="search_chooseSendType(2);">
+			<dd>
+			   <div id="search_directId" class="checkBox"></div>
+			   <div class="userName">直属下级</div>
+			</dd>
+		</a>
+		<a onclick="search_chooseSendType(3);">
+			<dd>
+			   <div id="search_singleId" class="checkBox"></div>
+			   <div class="userName">单个人</div>
+			</dd>
+		</a>
+	</dl>
+</div>
+
+<p id="redPak_showTypeTip_search" style="text-align: center; color:#FE5D39;margin:6px 0;"></p>
+
+<div id="container">
+    <input type="text" placeholder="请输入用户名" list="redPak_agentList" class="selectInput" id="redPak_inputName" value="" onchange="name_onchange_handler(this)" onfocus="fuzzySearch.call(this)" />
+    <div id="list_scoller" style="position: absolute;width: 100%;top:120px;bottom:2px;overflow: hidden;background: #fafafa;">
+	    <div id="redPak_agentList" class="selectList" >
+	        <!--<div id="001">aaa</div> 
+	        <div id="018">mumuxe</div>-->
+	    </div>
+    </div>
+</div> 
+
+</body>
+</html>

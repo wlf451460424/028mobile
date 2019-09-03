@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="ksesfPageHeader">
+    <a id="ksesfPage_back" class="icon_back"></a>
+    <h1 id="ksesf_title"></h1>
+    <a class="right2" onclick="createInitPanel_Fun('lottery_ksesf_help', true);"></a>
+</header>
+
+<div id="ksesfSelect">
+    <select class="cs-select cs-skin-overlay" id="ksesfPlaySelect">
+    </select>
+</div>
+<div class="timeFC">
+    <span id="ksesf_qihao"></span>
+    <span id="ksesf_timer"></span>
+</div>
+<div id="ksesf_prizelist" class="jq-dropdown jq-dropdown-tip has-icons">
+    <div class="jq-dropdown-panel">
+
+    </div>
+</div>
+<div class="InfoContent">
+    <a class="choice" id="ksesf_random"><img src="images/yaoyiyao.png" /> 点击机选</a>
+    <span class="choice"  style="float: right; margin-right: 2px;"><img id="ksesf_paly_shuoming" src="images/wen.png" style="width: 20px;height: 20px;"/></span>
+    <span class="choice"  data-jq-dropdown="#ksesf_prizelist" style="float: right; margin-right: 5px;"><img src="images/refresh.png" />近期开奖</span>
+</div>
+<div>
+	<span id="ksesf_shuoming" style="display: none;"></span>
+</div>
+<div data-role="content">
+    <div id="ksesfContent" style="position:absolute; top:150px;bottom:10px;overflow:hidden; width:100%;">
+        <div class="InfoContent" id="ksesf_ballView">
+        </div>
+    </div>
+</div>
+<!--footer底部  -->
+<footer id='ksesfPageFooter'>
+    <div style="text-align: center">
+        <!-- <img id="ksesf_queding" class="rightImgBut" src="images/icon_check_32.png" style="display:inline" /> -->
+        <div id="ksesf_queding" class="lcbqBtn">选号</div>
+        <div id="ksesf_qingkong" class="leftBtn">重选</div>
+        <div class="footertext">
+            <p style="font-size: 14px;line-height:20px;">
+                <span class="redtext" id="ksesf_zhushu">0</span>注 &nbsp;共<span class="redtext" id="ksesf_money">0</span>元
+            </p>
+            <!--底部显示的奖金和盈利，和倍数有关-->
+            <p class="awardWithBei">
+                奖金:<span class="redtext" id="ksesf_minAwardWithBei"></span><span class="redtext" id="ksesf_maxAwardWithBei"></span>元 | 盈利:<span class="redtext" id="ksesf_minWinWithBei"></span><span class="redtext" id="ksesf_maxWinWithBei"></span>元
+            </p>
+            <!--和倍数无关的奖金，用于利润率追号时获取奖金值-->
+            <p class="award">
+                当前玩法奖金:<span class="redtext" id="ksesf_minAward"></span><span class="redtext" id="ksesf_maxAward"></span>元
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

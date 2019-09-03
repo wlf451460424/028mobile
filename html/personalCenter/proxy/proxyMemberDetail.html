@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="proxyMemberDetailHeader">
+    <a onclick="setPanelBackPage_Fun('subordinateManage');" class="icon_back" ></a>
+    <h1 >个人资料</h1>
+</header>
+
+<!--content部分-->
+    <div class="content">  
+
+        <div id="proxyMemberDetailScroller"  style="position: absolute;width:100%;top:10px;bottom:0;overflow: hidden;">
+            <div class="proxyMemberDetail">
+                用户名：<span id="userNameID">--</span>
+                <br />
+                彩票余额：<span id="balanceMoneyId">--</span>
+                <br />
+                在线状态：<span id="stateId">--</span>
+                <br />
+                注册时间：<span id="userCreateTime">--</span>
+                <br />
+                最后登录时间：<span id="loginTimeId">--</span>
+                <br />
+                <a class="loginBtn" id="proxySubmit" style="display: none">转为代理</a>
+            </div>
+             <ul class="mylist" id="proxyMemberDetailList">
+            </ul>     
+        </div>               
+    </div>
+</body>
+</html>

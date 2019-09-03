@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>充值</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+
+<body>
+<header id="chargeHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>充值</h1>
+</header>
+<div class="content" style="padding-bottom:1rem">
+    <div id="welcome">
+        <span id="welcomeUser">--</span>,您好
+        <br />
+        账户余额：<span id="lotteryMoney">--</span>
+    </div>
+
+    <!-- 充值方式大类 -->
+    <div id="charge_type_list" class="charge-type-list">
+        <ul></ul>
+    </div>
+
+    <!-- 充值方式小类 -->
+    <div class="remind" style="margin-top: 10px;margin-bottom: 20px;" >
+        <dl id="showPayList" >
+        </dl>
+    </div>
+
+    <div style="margin-top: 10px; margin-bottom: 20px;" id="tonghangID">
+        <p class="whitetext" id="textID"></p>
+        <p class="whitetext" id="real_jine_tip">实际到账金额：<span id="real_jine" style="color: red;"></span> 元。</p>
+        <p class="whitetext" id="shouxufei"></p>
+        <p class="whitetext" style="color: #999;" id="real_guize">实际到帐金额（实际充值到帐金额=充值金额-手续费）</p>
+        
+        <p class="whitetext">充值金额&nbsp;<span style="color:red; padding:3px 10px;" id="change_tips"></span></p>
+        <input type="text" name="payMoney" id="chargePayMoney" value="" placeholder="请输入充值金额" onkeyup="return ValidateNumber12(this,value)"  onblur="return ValidateNumber12(this,value)"/>
+        <!--<select id="select_charge_money"></select>-->
+        
+        <a class="loginBtn"  id="chargePaySubmit" >确定</a>
+    </div>
+    
+    <!--<div style="color:red; padding:3px 10px;" id="show_charge_tip_div">
+    	<p>充值条件：<span id="show_charge_tip">30天单次100元以上的充值至少20次，累计金额2000元。才能使用此充值。</span></p>
+    </div>-->
+    
+    <p style="color:red; padding:3px 10px;" id="show_charge_tip"></p>
+    
+</div>
+</body>
+</html>

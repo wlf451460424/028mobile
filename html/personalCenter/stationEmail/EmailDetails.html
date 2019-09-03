@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="EmailDetailsHeader">
+    <a onclick="goBack.EmailLists();" class="icon_back"></a>
+    <h1>消息详情</h1>
+</header>
+
+<!--content部分-->
+<div class="content" style="padding-bottom:1rem">
+
+    <div id="EmailDetails" class="emailDetail">
+        <p id="EmailDeta_time" class="emailDetaTime"></p>
+        <hr style="border-top-color: #87ceeb;">
+        <div id="EmailDeta_info" class="emailDetaInfo"></div>
+        <div id="EmailDeta_content" class="emailDetaContent">
+            <p><b>内容</b>：</p>
+            <div id="EmailDeta_displayCont" class="recordDetail emailDisplayCont"></div>
+            <div>
+                <button id="replyEmail" style="display: none;" class="longBtn">回 复</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

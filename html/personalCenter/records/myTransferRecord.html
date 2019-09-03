@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="myTransferRecordHeader">
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1 >转账记录</h1>
+    <a href="#" id="queryMyTransferButton" style="right:0.4em" class="search"></a>
+</header>
+
+<!--content部分-->
+    <div class="content">
+    	<div class="select_condition" id="selectMyTransferID">
+        </div>
+
+		<div id="myTransferScroller" style="position: absolute;width: 100%;top:90px;bottom:2px;overflow: hidden;">
+			<ul class="mylist" id="myTransferList"></ul>
+		</div>
+		<div id="myTransfer_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+			<img src="images/noData.png" />
+		</div>
+    </div>
+
+</body>
+</html>

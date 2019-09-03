@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+	<!--header头部-->
+	<header id="sendRedPacketRecordHeader">
+	 	<a onclick="goBack.myRedPacket();" class="icon_back" ></a>
+        <h1>派发记录</h1>
+		<div class="selectType" id="selectState_redPacket"></div>
+    </header>
+
+    <!--content部分-->
+	<div class="send-redPak-content">
+		<div class="select_condition" id="selectDate_sendRedPacket">
+		</div>
+		<p>
+			<span>总金额：<b id="send_total_Money">0</b>元</span><span>红包个数：<b id="send_total_Num">0</b>个</span>
+		</p>
+	</div>
+
+	<div id="sendRedPacketRecordScroller"  style="position: absolute;width: 100%;top:78px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="sendRedPacketRecordList">
+		</ul>
+	</div>
+
+</body>
+</html>

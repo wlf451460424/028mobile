@@ -1,0 +1,112 @@
+/*hcp_ssc 选号页面样式*/
+.hcp_ballView > h3{ margin:0.5rem 1rem;}
+.hcp_ballView > ul{ overflow:hidden; margin:0 0 0 0.6rem; color: #FE5D39; min-width: 260px; max-width: 620px;}
+
+/* 选号球统一样式 */
+.hcp_ballView > ul > li{float: left; width:20%; text-align: center;}
+.hcp_ballView > ul > li >span {
+    display: inline-block;
+    margin: 0.5rem 0.4rem 0.1rem 0.3rem;
+    text-align: center;
+    line-height: 2.4rem;
+    font-size: 1.1rem;
+    cursor:pointer;
+    background-color: #ffffff;
+    border: 1px solid #FE5D39;
+}
+/* 赔率 */
+.hcp_ballView > ul > li > p{text-align:center; }
+
+/* 圆球 */
+.hcp_ballView > ul > li > span.hcp_redBalls{ width: 2.4rem; height: 2.4rem; border-radius: 50%;}
+.hcp_ballView > ul > li > span.hcp_redBalls_active{ background:#FE5D39; border:none; color:#ffffff; }
+
+/* 方球统一样式 */
+.hcp_ballView > ul > li >span.hcp_redBalls_property{ height: 2.4rem; border-radius: 0.2rem; width: 80%;}
+.hcp_ballView > ul > li >span.hcp_redBalls_property_active{ background:#FE5D39; border:none; color:#ffffff; }
+
+/* 方球_一行3个 */
+.hcp_ballView > ul.hcp_rectangle_num3 > li{ width:33.3%; }
+/* 方球_一行4个 */
+.hcp_ballView > ul.hcp_rectangle_num4 > li{ width:25%; }
+/* 方球_一行5个 */
+.hcp_ballView > ul.hcp_rectangle_num5 > li{ width:20%; }
+/* 方球_一行6个 */
+.hcp_ballView > ul.hcp_rectangle_num6 > li{ width:16.6%; }
+
+/* 龙虎斗 */
+div.longHu_group {width:50%; float: left; margin-bottom: 2px; }
+div.longHu_group:nth-of-type(odd) ul{border-right: 1px dashed #FE5D39; }
+div.longHu_group > h3{text-align: center;}
+div.longHu_group > ul.hcp_longHu {width:100%; min-width: 130px; margin:0;}
+div.longHu_group > ul.hcp_longHu li{ width:calc(100% / 3); }
+
+/* esf龙虎斗 */
+div.esf_longHu_group {width:50%; float:left; margin-bottom: 2px; }
+div.esf_longHu_group:nth-of-type(odd) ul{border-right: 1px dashed #FE5D39; }
+div.esf_longHu_group > h3{text-align: center;}
+div.esf_longHu_group > ul.hcpesf_longHu {width:100%; min-width: 80px; margin:0;}
+div.esf_longHu_group > ul.hcpesf_longHu li{ width:calc(100% / 2); }
+
+
+/* Footer : Input */
+.hcp_footerInput input{
+    width:calc(100% - 150px);
+    height:34px;
+    text-align: center;
+    background:#f0f0f0 !important;
+    font-weight:500;
+    font-size:16px;
+    border-radius: 5px;
+}
+
+/* Footer : left and right button */
+.hcp_leftBtn,.hcp_rightBtn{
+    position: absolute;
+    width:66px;
+    height: 30px;
+    line-height: 30px;
+    padding:0 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #FE5D39;
+    color:#ffffff;
+    top:10px;
+}
+
+.hcp_leftBtn{ left: 5px; }
+.hcp_rightBtn{ right: 5px; }
+
+/* Checkout Page of Handicap */
+ul#hcp_listviewid > li.hcp_checkItem{
+    background: #fff;
+    padding:2px 0 2px 14px !important;
+}
+
+li.hcp_checkItem > p > input{
+    height: 30px;
+    background:#f0f0f0 !important;
+    text-align: center;
+    width:calc(100% - 200px);
+    padding:0 5px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

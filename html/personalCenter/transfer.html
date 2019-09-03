@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+
+<body>
+<header id="transferHeader">
+    <a onclick="goBack.myLottery();" class="icon_back"></a>
+    <h1>转账</h1>
+</header>
+
+<div class="content">
+    <p class="whitetext">转出账户（余额：<span style="color:#FE5D39" id="transfer_out_balance">--</span> 元 ）</p>
+    <div class="select_condition" id="fundTransfer_select_out"></div>
+
+    <p class="whitetext">转入账户（余额：<span style="color:#FE5D39" id="transfer_in_balance">--</span> 元 ）</p>
+    <div class="select_condition" id="fundTransfer_select_in"></div>
+
+    <p class="whitetext">转账金额：</p>
+    <input style="width: 100%" type="text" name="transferMoney" id="transferMoney" value="" placeholder="请输入金额"
+           onkeyup="return ValidateNumberTwoDecimal(this,value)" onblur="return ValidateNumberTwoDecimal(this,value)"/>
+    <br>
+    <p class="whitetext">资金密码:</p>
+    <input type="password" id="fundPassword" maxlength="16" value="" placeholder="请输入密码"
+           onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>
+
+    <a class="loginBtn" id="transferSubmit">确定</a>
+</div>
+</body>
+</html>

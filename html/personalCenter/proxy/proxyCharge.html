@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="proxyChargeHeader">
+    <a onclick="setPanelBackPage_Fun('subordinateManage');" class="icon_back" ></a>
+    <h1 >下级转账</h1>
+</header>
+
+<!--content部分-->
+    <div class="content">  
+
+		<div class="recordDetail">
+			我的彩票余额：<span id="lotteryMoney_dl">--</span>
+			<br />
+			<!--下级账号：<span id="welcomeUser_dl">--</span>-->
+			<!--<br />-->
+		</div>    
+		
+		<div>
+			<p class="whitetext">下级名称：<span id="welcomeUser_dl">--</span></p>
+			
+			<p class="whitetext">转账类型：</p>
+			<select id="leixingID" data-theme="a" onchange="leixingType()">
+				<!--<option selected="selected" value="0">普通转账</option>-->
+			</select>	
+			
+			
+			<p class="whitetext">转账金额：(<span class="redtext">充值范围1-50000 元</span>)</p>
+			<input type="text" name="payMoney" id="payMoneyID"  maxlength="8" onkeyup="return ValidateNumberSub(this,value)"  value="" placeholder="请输入充值金额" required />
+			
+			
+			<div id="baizhuID_div">
+				<p  class="whitetext">备注：</p>
+				<select id="baizhuID" data-theme="a" onchange="beizhuType()">
+				</select>	
+			</div>
+	        
+			<p style="display: none" id="beizhuxinxiID">
+				<input type="text" name="beizhu" id="beizhuId_"  value="" placeholder="请输入备注信息" required />
+			</p>							
+			
+			<p class="whitetext">资金密码：</p>
+			<input type="password" name="password" id="passwordID" value="" placeholder="请输入密码" required />
+			
+			
+		</div>	
+		<a  class="loginBtn" id="proxyChargesubmit">确定</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="myLotteryHeader">
+    <a onclick="createInitPanel_Fun('lotteryHallPage');" class="icon_back" ></a>
+    <h1 >我的彩票</h1>
+    <a href="#" id="stationEmail" style="right:0.6em;top:0.4em;" class="StationEmailIcon"><b id="EmailUnreadCount"></b></a>
+</header>
+
+<!--content部分-->
+<div>
+    <div class="myLottery" id="myLotteryTop">
+        <table style="width: 100%;">
+            <tr>
+                <td width="30%">
+                    <div onclick="setPanelBackPage_Fun('changeHeadPortrait')" id="headPortrait" style="width:100%;height:100%;text-align:center;"></div>
+                </td>
+                <td width="70%">
+                    <p>
+                        用户昵称：<span id="username_top" style="width:30%;position:absolute; display:inline-block;overflow: hidden;white-space: nowrap; text-overflow:ellipsis"></span>
+                        <span id="modifyNickName" style="position: absolute;top:0.6rem;right: 1rem;">
+                            <img src="././images/img-mod/modifyNick.png" style="width: 22px;height: 22px;">
+                        </span>
+                    </p>
+                    <p>余额：<span id="lotteryMoney_top"></span> 元&nbsp;&nbsp;</p>
+                    <p style="display: none;">冻结：<span id="walletLockMoney"></span> 元&nbsp;&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li id="my_rechargeId"><img src="images/icon_chongzhi_24.png"/>充值</li>
+            <li id="my_withdrawId"><img src="images/icon_quxian_24.png"/>提款</li>
+            <li id="my_transferId" style="display: none;"><img src="images/icon_transfer_24.png"/>转账</li>
+            <li id="my_redPacketId"><img src="images/redPacket/myRedPacket.png"/>红包</li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="horizontalList">
+            <ul>
+                <li onclick="createInitPanel_Fun('myBettingRecords')"><img src="././images/img-mod/myBetReds.png" /><br />彩票投注</li>
+                <li onclick="createInitPanel_Fun('myZhuihaoRecords')"><img src="././images/img-mod/myZhuiReds.png" /><br />彩票追号</li>
+                <li onclick="createInitPanel_Fun('myBettingRecordsPK')"><img src="././images/img-mod/myBetReds.png" /><br />双面盘</li>
+                <!--<li onclick="createInitPanel_Fun('myWinRecord')"><img src="././images/img-mod/myWinReds.png" /><br />我的中奖</li>-->
+                <li onclick="createInitPanel_Fun('myAccountRecord')"><img src="././images/img-mod/myAccountReds.png" /><br />账变记录</li>
+            </ul>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="myLotteryList">
+        <ul>
+            <li>
+                <a onclick="createInitPanel_Fun('myChargeRecord')"><img src="././images/img-mod/myChargeReds.png">充值记录<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('myWithdrawalRecord')"><img src="././images/img-mod/myWithdrawalReds.png">提款记录<span class="btnRight"></span></a>
+            </li>
+            <li id="IsShowTransferRecord" >
+                <a onclick="createInitPanel_Fun('myTransferRecord')"><img src="././images/img-mod/myTransferReds.png">转账记录<span class="btnRight"></span></a>
+            </li>
+    	</ul>
+    </div>
+
+    <div class="myLotteryList">
+        <ul>
+            <li><a onclick="createInitPanel_Fun('myReportRecords')"><img src="././images/img-mod/myReportReds.png">个人报表<span class="btnRight"></span></a></li>
+    		<li><a href="#" id="proxyId"><img src="././images/img-mod/myProxy.png">团队管理<span class="btnRight"></span></a></li>
+    		<li id="thirdParty_report" style="display: none;"><a href="#"><img src="././images/img-mod/myVrReport.png">其他报表<span class="btnRight"></span></a></li>
+            <li id="showContractManage" style="display: none;"><a onclick="createInitPanel_Fun('contractManageNew');"><img src="././images/img-mod/myContract.png">契约管理<span class="btnRight"></span></a></li>
+            <li><a onclick="createInitPanel_Fun('personalInfo');"><img src="././images/img-mod/myInfo.png">我的账户<span class="btnRight"></span></a>
+            </li>
+    	</ul>
+    </div>
+
+    <div class="myLotteryList" style="margin-top: 40px;text-align: center;background: #FE5D39;">
+        <ul>
+            <li><a href="#" id="destroyLogin" style="color: #FFF;">退出登录<span></span></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

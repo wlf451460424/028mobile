@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="bettingDetilHeader">
+    <h1>投注详情</h1>
+    <a onclick="getPanelBackPage_Fun();" class="icon_back" ></a>
+    <a href="#lotteryHallPage" style="right:0.6em" class="home"></a>
+</header>
+<!--header  end-->
+<!--content部分-->
+
+<div class="InfoContent">
+    <div class="recordDetail">
+        <ul>
+            <li>
+                订单号：
+                <span id="orderId"></span>
+            </li>
+            <li>
+                流水号：
+                <span id="liushuiID"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="recordDetail">
+    	<div>
+            <ul>
+                <li>
+                    投注期号：<span id="qiHao"></span>
+                </li>
+                <li>
+                    彩&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;种：<span id="lotteryCodeID"></span>
+                </li>
+                <li>
+                    玩&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法：<span id="playCodeID"></span>
+                </li>
+                <li>
+                    购彩金额：<span id="tzmoney"></span>
+                </li>
+                <li>
+                    投注注数：<span id="zhuShu"></span>
+                </li>
+                <li>
+                    投注倍数：<span id="beiShu"></span>
+                </li>
+                <li>
+                    订单状态：<span id="orderState"></span>
+                </li>
+                <li>
+                    中奖注数：<span id="prizeNums" style="white-space:pre-wrap;table-layout:fixed; word-break : break-all; word-wrap : break-word ;"></span>
+                </li>
+                <li>
+                    奖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金：<span id="prizeMoney"></span>
+                </li>
+                <li style="word-break: break-all;word-wrap:break-word;white-space:normal;">
+                    开奖号码：<span id="prizeResult" ></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--content end-->
+</body>
+</html>

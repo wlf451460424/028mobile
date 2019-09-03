@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>团队总览</title>
+</head>
+<body>
+<!--header头部-->
+  <header id="teamSummaryHeader">
+    <a onclick="setPanelBackPage_Fun('proxyManage');" class="icon_back"></a>
+    <h1>团队总览</h1>
+  </header>
+<!--content部分-->
+  <div id="teamSummaryScroller" style="position: absolute;width: 100%;top:2px;bottom:3px;overflow: hidden;">
+    <!--Data for team summary-->
+    <p class="recordDetail" style="width:98%;font-size:16px;text-align:center;margin:6px auto -8px;height: 30px;line-height: 30px;">今 日 数 据</p>
+    <ul class="mylist" id="teamSumData">
+    </ul>
+
+    <table style="width: 100%;padding:0 4px;margin-top: 15px;"></table>
+
+    <p class="button-grouped flex" id="changeChartID" style="margin-top: 1em;">
+      <button id="weekChart" class="button">一周</button>
+      <button id="halfMonthChart" class="button">半月</button>
+      <button id="monthChart" class="button">一月</button>
+    </p>
+
+    <!--Chart for team summary-->    <!-- Line Chart - Default -->
+    <div id="lineChart" style="width:94%;height:26rem;margin: 20px 2px 20px;padding-bottom: 20px;"></div>
+
+  </div>
+</body>
+</html>

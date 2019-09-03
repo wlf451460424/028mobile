@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+	<header id="RetrievePwdHeader" >
+		<a onclick="createInitPanel_Fun('loginPage');" class="icon_back"></a>
+		<h1>找回密码</h1>
+	</header>
+
+	<div class="content" >
+        <p class="whitetext">用户名：</p>
+		<input id="RePwd_UserName" onkeyup="this.value=this.value.trim()" type="text">
+
+		<p class="whitetext">找回方式：</p>
+		<input type="radio" id="RecoveryMode" value="2" checked="checked" name="RecoveryMode"/><label for="RecoveryMode">通过密保答案找回</label>
+		
+		<p class="whitetext">密保问题：</p>
+		<select name="RePwd_Questions" id="RePwd_Questions"></select>
+		
+		<p class="whitetext">密保答案：</p>
+		<input type="text" onkeyup="this.value=this.value.trim()" id="RePwd_Answer">
+
+		<a id="RetrievePwdBtn" class="loginBtn">立即找回</a>
+
+	</div>
+</body>
+</html>

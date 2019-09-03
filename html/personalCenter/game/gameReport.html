@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="gameReportHeader">
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1 >其他报表</h1>
+</header>
+
+<!--content部分-->
+<div style="padding-bottom:1rem">
+    <div style="margin:10px 12px 0;"><b>· 个人报表 </b></div>
+    <div class="myLotteryList">
+        <ul>
+            <li>
+                <a onclick="createInitPanel_Fun('gamePersonalReport')">个人报表<span class="btnRight"></span></a>
+            </li>
+        </ul>
+    </div>
+    <div style="margin:10px 12px 0;"><b>· 团队报表 </b></div>
+    <div id="gameReportTeam" class="myLotteryList">
+        <ul>
+            <!--<li>
+                <a onclick="createInitPanel_Fun('teamGameReportSelf')">自身统计<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamGameReportSubordinate')">下级统计<span class="btnRight"></span></a>
+            </li>
+            <li>
+                <a onclick="createInitPanel_Fun('teamGameReportAll')">团队合计<span class="btnRight"></span></a>
+            </li>-->
+            <li>
+		        <a onclick="createInitPanel_Fun('thirdReport')">团队报表<span class="btnRight"></span></a>
+		    </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

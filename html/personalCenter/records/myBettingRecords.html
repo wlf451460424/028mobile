@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>彩票投注</title>
+</head>
+<body>
+	<!--header头部-->
+	<header id="myBettingRecordsHeader">
+	 	<a onclick="goBack.myLottery();" class="icon_back" ></a>
+        <h1 >彩票投注</h1>
+		<div class="selectType" id="selectType_myBetting"></div>
+    </header>
+    <!--content部分-->
+	<div class="select_condition" id="selectID">
+	</div>
+
+	<div id="myBettingRecordsScroller"  style="position: absolute;width: 100%;top:45px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="myBettingRecordsList">
+		</ul>
+	</div>
+	<div id="myBettingRecords_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+		<img src="images/noData.png" />
+	</div>
+</body>
+</html>

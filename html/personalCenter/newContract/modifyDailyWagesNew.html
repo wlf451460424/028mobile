@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<header id="modifyDailyWagesNewHeader">
+    <a onclick="setPanelBackPage_Fun('dailyWagesNewList')" class="icon_back"></a>
+    <h1>日结契约</h1>
+</header>
+
+<div>
+
+    <div id="modifyDailyWagesNewScroll" class="select_condition" style="padding:10px;">
+        <div style="line-height: 30px">
+            <select style="border:1px solid #dadada;padding: 6px;" id="modify_dailyWages_type" onchange="getMineAndSubDwInfo()"></select><br>
+            <span id="modify_dailyWages_mine"></span><br>
+            <span id="moidfy_dailyWages_sub"></span>
+            <select style="border:1px solid #dadada;padding: 8px;" id="new_dailyWages_select"></select>
+        </div>
+
+        <div id="dailyWagesRuleTable"></div>
+        <p id="dailyWages_activeUser" style="color:#FE5D39; margin-top:10px; margin-left:10px;"></p>
+        <a id="modifyDailyWagesNewBtn" class="loginBtn" style="margin-top: 40px;"> 保存 </a>
+    </div>
+</div>
+
+</body>
+</html>

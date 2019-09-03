@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<script>
+		$("#help_plw_title").html(LotteryInfo.getLotteryNameByTag("plw"));
+	</script>
+</head>
+<body>
+<header id="lottery_plw_helpHeader" data-transition="up">
+	<a href="#" onclick="backFn();" class="icon_back" ></a>
+	<h1 id="help_plw_title"></h1>
+</header>
+	<div>
+		<section id="wrapper">
+			<article id="scroller">
+				<dl class="dlTit">
+					<dt>开奖时间：</dt>
+					<dd>每天一期，开奖时间为20:30。</dd>
+					<dt>玩法规则：</dt>
+					<dd>每期开奖号码为5个数字，每个开奖数字范围0-9</dd>
+				</dl>
+				<p>
+					<strong>玩法说明：</strong>
+				</p>
+				<div class="conInfo">
+					<table width="100%" border="0" cellspacing="0">
+
+						<tr>
+							<th colspan="2">玩法</th>
+							<th >中奖条件</th>
+						</tr>
+						<tr>
+							<td rowspan="2">五星</td>
+							<td width="10%">直选复式</td>
+							<td rowspan="2">竞猜五位开奖号码，即万位、千位、百位、十位和个位，且顺序一致。</td>
+						</tr>
+						<tr>
+							<td width="10%">直选单式</td>
+						</tr>
+						<tr>
+							<td>定位胆</td>
+							<td>定位胆</td>
+							<td>竞猜一位开奖号码，与开出号码按位相符。</td>
+						</tr>
+						<tr>
+							<td>不定胆</td>
+							<td>一码不定胆</td>
+							<td>竞猜五位开奖号码中的任意一位。</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+		</section>
+	</div>
+</body>
+</html>

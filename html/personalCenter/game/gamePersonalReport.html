@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>个人报表</title>
+</head>
+<body>
+<!--header头部-->
+<header id="gamePersonalReportHeader">
+    <a onclick="setPanelBackPage_Fun('gameReport');" class="icon_back"></a>
+    <h1 >个人报表</h1>
+    <div class="selectType" id="selectType_gamePersonalReport"></div>
+</header>
+<!--content部分-->
+<div class="select_condition" id="gamePersonalReportDate">
+
+</div>
+
+<div id="gamePersonalReportScroller" style="position: absolute;width: 100%;top:90px;bottom:2px;overflow: hidden;">
+    <ul class="mylist" id="gamePersonalReportContent">
+    </ul>
+</div>
+<div id="gamePersonalReport_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+	<img src="images/noData.png" />
+</div>
+</body>
+</html>

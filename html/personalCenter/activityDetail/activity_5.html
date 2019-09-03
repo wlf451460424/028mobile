@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>充值福利大放送</title>
+	<style>
+		table.table_css tr td { border:1px solid #7070f7;}
+        table.table_css { width: 100%; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse; padding:2px;}   
+	</style>
+</head>
+<body>
+	<!--header头部-->
+	 <header id="activity_5Header">
+	 	<a onclick="createInitPanel_Fun('activity');" class="icon_back" ></a>
+        <h1 >充值福利大放送</h1>
+    </header>
+   <!--content部分-->
+   <div>
+   		<div id="div_class_5" style="color: #666666;">
+			<img src="images/web-banner_activity5.jpg" style="width: 100%; "/><br />
+			<div style="margin: 10px;">
+				<div style="margin-bottom: 15px;">
+					<span style="font-weight: bold;color: #000000;" >活动名称：</span><br/>
+		        	<span>充400得800</span>
+				</div>
+				<div style="margin-bottom: 15px;">
+					<span style="font-weight: bold;color: #000000;" >活动时间：</span><br/>
+		        	<span>2019年6月1日~2019年6月14日</span>
+				</div>
+				
+				<div style="margin-bottom: 15px;">
+					<span style="font-weight: bold;color: #000000;" >活动内容：</span><br/>
+					活动区间内充值400元，且每日消费400元，即可领取礼金。中断领取则重新开始。<br/>
+					<br/>
+					<table class="table_css">
+		                <tbody>
+		                	<tr><td>天数</td><td>金额</td></tr>
+		                	<tr><td>第一天</td><td>8元</td></tr>
+		                	<tr><td>第二天</td><td>20元</td></tr>
+		                	<tr><td>第三天</td><td>8元</td></tr>
+		                	<tr><td>第四天</td><td>30元</td></tr>
+		                	<tr><td>第五天</td><td>8元</td></tr>
+		                	<tr><td>第六天</td><td>38元</td></tr>
+		                	<tr><td>第七天</td><td>8元</td></tr>
+		                	<tr><td>第八天</td><td>50元</td></tr>
+		                	<tr><td>第九天</td><td>8元</td></tr>
+		                	<tr><td>第十天</td><td>58元</td></tr>
+		                	<tr><td>第十一天</td><td>8元</td></tr>
+		                	<tr><td>第十二天</td><td>68元</td></tr>
+		                	<tr><td>第十三天</td><td>8元</td></tr>
+		                	<tr><td>第十四天</td><td>80元</td></tr>
+		     		</tbody></table>
+				</div>	
+				
+				<div style="margin-bottom: 10px;">
+					<span style="font-weight: bold;color: #000000;" >活动规则：</span><br/>
+				</div>
+				<div>
+					1. 所有用户活动区间内均可参与；<br/>
+					2. 当日赠送金额仅限当日手动领取，如未领取，活动重新开始；<br/>
+					3. 本平台禁止一切非正常手段的套利或者变相投注套利行为，不管以任何形式作弊，一经发现，将冻结账号，没收奖励；<br/>
+					4.本活动最终解释权归正信永胜所有。<br/>
+				</div>
+	        </div>
+	        
+	        <div style="font-weight: bold;margin-bottom: 15px;">
+	        	<p class="whitetext">当前充值：<span style="color: #000000;" id="RechargeMoney">--</span>&nbsp;&nbsp;元</p>
+	        </div>
+	        <div style="font-weight: bold;margin-bottom: 15px;">
+	        	<p class="whitetext">当前投注：<span style="color: #000000;" id="BuyMoney">--</span>&nbsp;&nbsp;元</p>
+	        </div>
+	        
+	        <div style="font-weight: bold;margin-bottom: 15px;">
+	        	<p class="whitetext" style="font-size: 16px;">已连续领取  <span style="color: #000000;" id="singeDays">--</span>  天奖励。</p>
+	        </div>
+	        
+			<div align="center" style="padding-top: 10px;">
+			    <img id="singe_btn" src="images/singe5_show.png" style="width: 140px; height: 55px;">
+			</div>
+		    <br/>
+		    
+		</div>
+   </div>
+</body>
+</html>

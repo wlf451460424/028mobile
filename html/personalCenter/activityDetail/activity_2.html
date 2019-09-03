@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>开业大派送</title>
+</head>
+<body>
+	<!--header头部-->
+	 <header id="activity_2Header">
+	 	<a onclick="createInitPanel_Fun('activity');" class="icon_back" ></a>
+        <h1 >开业大派送</h1>
+    </header>
+   <!--content部分-->
+	<div>
+		<img src="images/web-banner_activity2.jpg" style="width: 100%; "/>
+		<div style="text-align: center;font-size: 16px;font-weight: bold;margin-top: 15px;"><i >推荐奖金豪气送</i></div>
+		<div style="margin-top: 10px;text-align: center;color: #666;">2018-08-01~2018-08-03</div>
+		<div style='word-wrap:break-word; word-break:break-all;display:block;width: 94%;margin-left: 10px;margin-right: 10px;'>
+			活动内容：<br />
+			在活动期间内注册成功绑定资料，充值金额≥300元，本人奖励58元，上级奖励10元，活动期间每人只限一次活动机会。有任何疑问请联系在线客服。<br /><br />
+			提款说明：<br />
+			需消费（首次充值金额+活动奖励）的100%流水。<br /><br />
+			禁止一切非正常手段的套利行为，一经发现，将冻结账号，没收奖励。<br /><br />
+			本活动最终解释权归正信永胜所有！
+        </div>
+        
+        <br /><br />
+        
+        <div style="display: none;">
+        	<p class="whitetext" > 您的充值金额为：<span id="rechargeSum"></span>元。</p>
+        	<p class="whitetext" > 可领取：<span id="awardAmount"></span>元。</p>
+        </div>
+        <br /><br />
+        
+        <div class="myLotteryList" style="margin-top: 40px;text-align: center;background: #FE5D39;">
+	        <ul>
+	            <li id="recive_btn_li" style="display: none;"><a href="#" id="recive_btn" style="color: #FFF;">领取<span></span></a></li>
+	        </ul>
+	    </div>
+    
+	</div>
+</body>
+</html>

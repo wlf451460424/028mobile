@@ -1,0 +1,77 @@
+#afui .list {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  list-style: none;
+  background-color: #eee;
+}
+#afui .list li {
+  display: block;
+  list-style: none;
+  position: relative;
+  padding: 20px 20px 20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+#afui .list li:first-child {
+  /*border-top: 1px solid #ccc;*/
+}
+#afui .list > li > a {
+  display: block;
+  position: relative;
+  display: block;
+  margin: -20px -20px -20px 10px;
+  text-decoration: none;
+}
+@media screen and (max-width:400px){
+  #afui .list > li > a {
+    margin: -20px -20px -20px 0px;
+  }
+}
+#afui .list a .af-badge {
+  position: absolute;
+  right: 30px;
+  top: 48%;
+  margin-top: -10px;
+}
+#afui .list > li > a:after {
+  position: absolute;
+  right: 2%;
+  font-family: 'chevron';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  top: 50%;
+  margin-top: -0.5em;
+  color:inherit;
+}
+#afui .list .divider {
+  position: relative;
+  top: -1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  background-color: #dfe0e2;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  padding-right: 60px;
+}
+#afui .list.inset {
+  border: 1px solid #ccc;
+  /*border-radius: 6px;*/
+  margin: 10px;
+}
+#afui .list.inset li:first-child {
+  border-top: none;
+  border-radius: 6px 6px 0 0;
+}
+#afui .list.inset li:last-child {
+  border-bottom: none;
+  border-radius: 6px;
+}

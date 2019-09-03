@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  mobileweb:
+    image: hub.mc.corp/mobile/027mobile:${VERSION}
+    ports:
+      - 59027:80
+    deploy:
+      replicas: 1
+    configs:
+      - source: url
+        target: /usr/share/nginx/html/config.json
+      
+
+configs:
+  url:
+    file: config.json

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="teamReportHeader">
+    <a  id="teamReportBackId" class="icon_back" ></a>
+    <h1>彩票报表</h1>
+    <!--<a href="#" id="queryteamReportButtonID" style="right:0.4em" class="search"></a>-->
+</header>
+
+<!--content部分-->
+<div class="content">
+    <div class="select_condition" id="selectteamReportID"></div>
+
+    <div id="teamReport_nav_scroller" style="overflow:hidden;border-bottom: 1px solid #ddd;">
+        <div id="teamReport_navigationLabel" class="teamReportrecordList_daohang" ></div>
+    </div>
+
+    <div id="teamReportScroller" style="position: absolute;width: 100%;top:130px;bottom:2px;overflow: hidden;">
+
+        <span style="margin:10px 8px 0; font-weight: bold;display: block;">团队合计   <span style="color:#666666;" id="teamReportTotal_tip"></span></span>
+        <div id="teamReportTotal">
+        </div>
+
+        <span style="margin:10px 8px 0; font-weight: bold;display: block;">自身统计   <span style="color:#666666;" id="teamReportMy_tip"></span></span>
+        <div id="teamReportMy">
+        </div>
+
+        <div id="xiaji_div">
+            <span style="margin:10px 8px 0; font-weight: bold;display: block;">下级:   </span>
+            <div class="teamReportrecordList_walletTop" style="margin:0 5px 10px; padding:0;">
+                <ul class="mylist" id="teamReportList"></ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

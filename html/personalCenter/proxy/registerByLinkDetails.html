@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="registerByLinkDetailsHeader">
+    <a onclick="setPanelBackPage_Fun('registerByLink');" class="icon_back" ></a>
+    <h1 >添加链接</h1>
+</header>
+
+<!--content部分-->
+<div class="content" style="padding-bottom:1rem">
+        <p class="whitetext">下级类型:</p>
+        <div class="remind" style="margin-top: 10px;margin-bottom: 20px;">
+            <dl>
+                <a onclick="SubordinateType_link(0);">
+                    <dd>
+                        <div class="userName">代理</div>
+                        <div id="linkReg_proxy" class="checkBoxA"></div>
+                    </dd>
+                </a>
+                <a onclick="SubordinateType_link(1);">
+                    <dd>
+                        <div class="userName">会员</div>
+                        <div id="linkReg_member" class="checkBox"></div>
+                    </dd>
+                </a>
+            </dl>
+        </div>
+
+        <p class="whitetext">团队返点:</p>
+        <div id="linkRebate_proxy">
+            <select id="setReb_proxy" data-theme="a"></select>
+        </div>
+        <div id="linkRebate_member" style="display: none">
+            <select id="setReb_member" data-theme="a"></select>
+        </div>
+
+        <p class="whitetext">团队名称: <span class="redtext"> ( 6-16个汉字、数字或字母组成 )</span></p>
+        <input type="text" id="teamName" value="" maxlength="16" placeholder="请输入团队名称" required />
+
+        <p class="whitetext">QQ: <span class="redtext"> ( 5-13位数字组成 )</span></p>
+        <input type="number" id="linkQQ" value="" onkeyup="return Validatetel(this,value)" placeholder="请输入QQ号码" required />
+
+        <a class="loginBtn" id="btnHyperlink">生成链接</a>
+        <textarea id="hyperlinkid"  value="" style="display: none;"/>
+</div>
+</body>
+</html>

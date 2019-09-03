@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <header id="modifyInfoHeader" >
+        <a onclick="setPanelBackPage_Fun('personalInfo');" class="icon_back"></a>
+        <h1>修改个人资料</h1>
+    </header>
+
+        <div class="content" >
+		   <!--<p class="whitetext" style="display: inline-flex;margin-top:15px;"> 用户昵称 : </p>
+           <input type="text" name="userNickName" id="userNickNameID_" maxlength="8" value="" placeholder="请输入昵称" />
+           <br>-->
+           <p class="whitetext" style="display: inline-flex;margin-top:15px;"> 邮箱 : </p><p id="hasMyEmail" style="margin:15px 0 0 10px; display: inline-flex;"></p>
+           <input type="email" name="userEmail" id="userEmailID_" maxlength="30" value="" placeholder="请输入邮箱" />
+           <br>
+           <p class="whitetext" style="display: inline-flex;margin-top:15px;">手机号码 : </p><p id="hasPhone" style="margin:15px 0 0 10px; display: inline-flex;"></p>
+           <input type="number" name="userTel" id="userPhoneID_" maxlength="11" onkeyup="return Validatetel(this,value)" value="" placeholder="请输入手机号码"/>
+           <br>
+           <!--<p class="whitetext" style="display: inline-flex;">用户QQ : </p><p id="hasQQ" style="margin-left:10px;display: inline-flex;"></p>
+           <input type="number" name="userQQ" id="userQQID_" maxlength="13"  onkeyup="return Validatetel(this,value)"  value="" placeholder="请输入QQ号码"/>
+           <br>-->
+
+            <!--<p>省市区域：</p>
+            <div id="mycity" class="ui-btn-text">
+                <select class="prov" id="prov" data-theme="a">
+                    &lt;!&ndash;<option value="noselect" data-placeholder="true">请选择省份</option>&ndash;&gt;
+                </select>
+                <select class="city" id="city" data-theme="a">
+                    &lt;!&ndash;<option value="noselect" data-placeholder="true">请选择城市</option>&ndash;&gt;
+                </select>
+                &lt;!&ndash;<select class="dist" id="dist" data-theme="a"></select>&ndash;&gt;
+            </div>-->
+            <a  id="saveUserInfoBtn" class="loginBtn">确定</a>
+            <p style="color:#FE5D39;margin:30px 10px;">温馨提示：邮箱和手机号码绑定后无法修改，如果需要修改，请联系客服（上午10点~凌晨2点）！</p>
+        </div>
+</body>
+</html>

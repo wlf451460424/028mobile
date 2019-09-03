@@ -1,0 +1,121 @@
+/* jQuery Dropdown: A simple dropdown plugin
+ *
+ * Contribute: https://github.com/claviska/jquery-dropdown
+ *
+ * @license: MIT license: http://opensource.org/licenses/MIT
+ *
+ */
+.jq-dropdown {
+  position: absolute;
+  z-index: 1039;
+  display: none;
+}
+.jq-dropdown .jq-dropdown-menu,
+.jq-dropdown .jq-dropdown-panel {
+  list-style: none;
+  background: white;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  box-shadow: -2px 0 5px white,0 -2px 6px rgba(0, 0, 0, 0.3),0 6px 5px rgba(0, 0, 0, 0.3),2px 0 5px white;
+  overflow: visible;
+  padding: 4px 0;
+  margin: 0;
+}
+.jq-dropdown .jq-dropdown-panel {
+  /*padding: 10px 6px 0;*/
+  margin-top: 30px;
+  font-size: 13px;
+  height: 16rem;
+}
+
+.jq-dropdown.jq-dropdown-tip {
+  margin-top: 60px;
+}
+.jq-dropdown.jq-dropdown-tip:before {
+  position: absolute;
+  top: 23px;
+  left: 90%;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ddd;
+  display: inline-block;
+}
+.jq-dropdown.jq-dropdown-tip:after {
+  position: absolute;
+  top: 25px;
+  left: 90%;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  display: inline-block;
+}
+.jq-dropdown.jq-dropdown-tip.jq-dropdown-anchor-right:before {
+  left: auto;
+  right: 9px;
+}
+.jq-dropdown.jq-dropdown-tip.jq-dropdown-anchor-right:after {
+  left: auto;
+  right: 10px;
+}
+.jq-dropdown.jq-dropdown-scroll .jq-dropdown-menu,
+.jq-dropdown.jq-dropdown-scroll .jq-dropdown-panel {
+  max-height: 180px;
+  overflow: auto;
+}
+.jq-dropdown .jq-dropdown-menu li {
+  list-style: none;
+  padding: 0 0;
+  margin: 0;
+  line-height: 18px;
+}
+.jq-dropdown .jq-dropdown-menu li > a,
+.jq-dropdown .jq-dropdown-menu label {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  line-height: 18px;
+  padding: 3px 15px;
+  margin: 0;
+  white-space: nowrap;
+}
+.jq-dropdown .jq-dropdown-menu li > a:hover,
+.jq-dropdown .jq-dropdown-menu label:hover {
+  background-color: #f2f2f2;
+  color: inherit;
+  cursor: pointer;
+}
+.jq-dropdown .jq-dropdown-menu .jq-dropdown-divider {
+  font-size: 1px;
+  border-top: solid 1px #e5e5e5;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.jq-dropdown-panel table{
+  width:100%;
+}
+.jq-dropdown-panel table tr:nth-of-type(odd){
+  background-color: #E5E5E5;
+}
+.jq-dropdown-panel td{
+  padding:2px 4px;
+  text-align: center;
+  display: inline-table;
+  /*border-bottom-color: #e2e2e2;*/
+  /*border-bottom-width: 1px;*/
+  /*border-bottom-style: dashed;*/
+}
+.jq-dropdown-panel > p >span{
+  display: inline-block;
+  text-align: center;
+}
+
+.jq-dropdown-panel td:first-of-type,.jq-dropdown-panel > p >span:first-of-type{
+  width: 144px;
+  border-right: 1px dashed #ffffff;
+}
+.jq-dropdown-panel td:last-of-type,.jq-dropdown-panel > p >span:last-of-type{
+  width: calc(100% - 145px);
+}

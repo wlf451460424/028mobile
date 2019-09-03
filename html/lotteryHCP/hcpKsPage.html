@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="hcpKsPageHeader">
+    <a id="hcpKsPage_back" class="icon_back"></a>
+    <h1 id="hcpKs_title"></h1>
+    <a class="right2" onclick="createInitPanel_Fun('lottery_hcpKs_help',true)"></a>
+</header>
+
+<div id="hcpKsSelect">
+    <select class="cs-select cs-skin-overlay" id="hcpKsPlaySelect">
+    </select>
+</div>
+
+<div class="timeFC">
+    <span id="hcpKs_qihao"></span>
+    <span id="hcpKs_timer"></span>
+</div>
+
+<div id="hcpKs_prizelist" class="jq-dropdown jq-dropdown-tip has-icons">
+    <div class="jq-dropdown-panel">
+    </div>
+</div>
+
+<div class="InfoContent">
+    <a class="choice" id="hcpKs_random"><img src="images/yaoyiyao.png" /> 点击机选</a>
+    <span class="choice"  data-jq-dropdown="#hcpKs_prizelist" style="float: right; margin-right: 10px;"><img src="images/refresh.png" />近期开奖</span>
+</div>
+
+<div data-role="content">
+    <div id="hcpKsContent" style="position:absolute; top:150px;bottom:10px;overflow: hidden; width:100%;">
+        <div class="InfoContent" id="hcpKs_ballView">
+        </div>
+    </div>
+</div>
+
+<!--footer底部  -->
+<footer id='hcpKsPageFooter'>
+    <div style="text-align: center">
+        <div id="hcpKs_queding" class="hcp_rightBtn">选号</div>
+        <div id="hcpKs_qingkong" class="hcp_leftBtn">重选</div>
+        <div class="hcp_footerInput">
+            <input type="tel" maxlength="9" id="hcpKs_money" placeholder="输入金额" onkeyup="this.value=this.value.replace(/\D/g,'')">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

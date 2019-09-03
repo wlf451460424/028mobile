@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>追号记录</title>
+</head>
+<body>
+	<!--header头部-->
+	<header id="myZhuihaoRecordsHeader">
+	 	<a onclick="goBack.myLottery();" class="icon_back" ></a>
+        <h1 >追号记录</h1>
+		<div class="selectType" id="selectType_zhuiHao"></div>
+    </header>
+    <!--content部分-->
+	<div class="select_condition" id="myZhuihaoselectID">
+	</div>
+	<div id="myZhuihaoRecordsScroller"  style="position: absolute;width: 100%;top:45px;bottom:2px;overflow: hidden;">
+		<ul class="mylist" id="myZhuihaoRecordsList">
+		</ul>
+	</div>
+	<div id="myZhuihaoRecords_noData_tips" style="width: 100%; text-align: center; margin-top: 50px;display: none;">
+		<img src="images/noData.png" />
+	</div>
+</body>
+</html>
